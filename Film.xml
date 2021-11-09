@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cinema
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+>
+    <ticket id="1">
+        <session>
+            <session_date> 20.10.2020 </session_date>
+            <session_time> 12:10 </session_time>
+            <session_price> 100 </session_price>
+        </session>
+
+        <film>
+            <title>The Emperor's</title>
+            <director> Fernan </director>
+            <film_duration>02:10:00</film_duration>
+            <description>Good film</description>
+        </film>
+
+        <hall>
+            <hall_type> 3D </hall_type>
+            <seat_id> 2 </seat_id>
+            <column_id> 1 </column_id>
+        </hall>
+    </ticket>
+</cinema>
+

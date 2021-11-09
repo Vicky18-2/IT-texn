@@ -1,0 +1,67 @@
+<!-- == Xml-Декларація======================================= -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- == Корнєвій елемент schema ============================= -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetnamespace="http://nure.ua/bookshop"
+            xmlns:bs="http://nure.ua/bookshop"
+            elementformdefault="qualified">
+    <!-- ==Розділ опису елементів============================= -->
+    <!-- ==Комплексний елемент bookshop ========================= -->
+    <xsd:element name="bookshop">
+        <xsd:complextype>
+            <xsd:sequence>
+                <xsd:element name="book" type="bs:Book" maxoccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complextype>
+    </xsd:element>
+    <!-- ==Комплексний елемент Book ============================== -->
+    <xsd:complextype name="Book">
+        <xsd:complexcontent>
+            19
+            <xsd:extension base="bs:Entity">
+                <xsd:sequence>
+                    <xsd:element name="title" type="xsd:string" minoccurs="1"
+                                 maxoccurs="1" />
+                    <xsd:element name="author" type="xsd:string" minoccurs="1"
+                                 maxoccurs="unbounded" />
+                    <xsd:element name="ISBN" minoccurs="0" maxoccurs="1">
+                        <xsd:simpletype>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="ISBN-[0-9]{5,5}-[0-9]{4,4}"/>
+                            </xsd:restriction>
+                        </xsd:simpletype>
+                    </xsd:element>
+                    <xsd:element name="price" type="bs:Price" />
+                    <xsd:element name="category" type="bs:Category" />
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexcontent>
+    </xsd:complextype>
+    <!-- == Опису атрибута id =============================== -->
+    <xsd:complextype name="Entity" abstract="true">
+        <xsd:attribute name="id" type="bs:Entityid" use="required" />
+    </xsd:complextype>
+    <!-- ==Простий елемент Price ================================ -->
+    <xsd:simpletype name="Price">
+        <xsd:restriction base="xsd:double">
+            <xsd:mininclusive value="0" />
+        </xsd:restriction>
+    </xsd:simpletype>
+    <!-- ==Простий елемент Category ============================= -->
+    <xsd:simpletype name="Category">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Fantasy" />
+            <xsd:enumeration value="Action" />
+            <xsd:enumeration value="Love novel" />
+            <xsd:enumeration value="Monograph" />
+        </xsd:restriction>
+    </xsd:simpletype>
+    <!-- ==Простий елемент Category ============================= -->
+    <xsd:simpletype name="Entityid">
+        <xsd:restriction base="xsd:int">
+            <xsd:mininclusive value="-1" />
+            <xsd:maxexclusive value="99999999" />
+            <xsd:pattern value="[0-9]*" />
+        </xsd:restriction>
+    </xsd:simpletype>
+</xsd:schema>
