@@ -1,0 +1,116 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://nure/it-texn/pz"
+            xmlns:tns="http://nure/it-texn/pz"
+            elementFormDefault="qualified">
+    <xsd:element name="tickets">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="ticket" type="tns:ticket" maxOccurs="unbounded" minOccurs="1"/>
+            </xsd:sequence>
+        </xsd:complexType>
+        <xsd:unique name="ticket_id">
+            <xsd:selector xpath="tns:ticket"/>
+            <xsd:field xpath="@id"/>
+        </xsd:unique>
+    </xsd:element>
+
+    <xsd:complexType name="ticket">
+        <xsd:all>
+            <xsd:element name="ticket_price" type="xsd:decimal" minOccurs="1"/>
+            <xsd:element name="session" type="tns:session" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="film" type="tns:film" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="hall" type="tns:hall" minOccurs="1" maxOccurs="1"/>
+        </xsd:all>
+        <xsd:attribute name="id" type="xsd:int" use="required"/>
+    </xsd:complexType>
+
+    <xsd:simpleType name="ticket_price">
+        <xsd:restriction base="xsd:decimal">
+            <xsd:fractionDigits value="1"/>
+            <xsd:totalDigits value="3"/>
+            <xsd:minInclusive value="50"/>
+            <xsd:maxInclusive value="350"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="session">
+        <xsd:choice>
+            <xsd:sequence minOccurs="0">
+                <xsd:element name="session_date" type="xsd:date"/>
+                <xsd:element name="session_time" type="xsd:time"/>
+            </xsd:sequence>
+            <xsd:element name="session_date_and_time" type="xsd:dateTime" minOccurs="0"/>
+        </xsd:choice>
+    </xsd:complexType>
+
+    <xsd:complexType name="film">
+        <xsd:sequence>
+            <xsd:element name="title" type="xsd:token" minOccurs="1"/>
+            <xsd:element name="director" type="xsd:token" minOccurs="1" maxOccurs="2"/>
+            <xsd:element name="film_duration" type="xsd:time" minOccurs="1"/>
+            <xsd:element name="description" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="genre" type="xsd:token" minOccurs="1"/>
+            <xsd:element name="language"  minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attribute name="lang" type="xsd:token"/>
+    </xsd:complexType>
+
+    <xsd:simpleType name="description">
+        <xsd:restriction base="xsd:string">
+            <xsd:minLength value="2"/>
+            <xsd:maxLength value="150"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="genre">
+        <xsd:restriction base="xsd:token">
+            <xsd:enumeration value="Mystery"/>
+            <xsd:enumeration value="Comedy"/>
+            <xsd:enumeration value="Fantasy"/>
+            <xsd:enumeration value="Fiction"/>
+            <xsd:enumeration value="Drama"/>
+            <xsd:enumeration value="Horror"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+    <xsd:simpleType name="lang">
+        <xsd:restriction base="xsd:token">
+            <xsd:maxLength value="3"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="hall">
+        <xsd:sequence>
+            <xsd:element name="hall_type" type="xsd:string" minOccurs="1"/>
+            <xsd:element name="column_id" type="xsd:int"/>
+            <xsd:element name="seat_id" type="xsd:token"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="hall_type">
+        <xsd:restriction base="xsd:token">
+            <xsd:length value="2"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="seat_id">
+        <xsd:restriction base="tns:lang">
+            <xsd:pattern value="[A-P]"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="column_id">
+        <xsd:restriction base="xsd:int">
+            <xsd:minExclusive value="0"/>
+            <xsd:maxExclusive value="5"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="id">
+        <xsd:restriction base="xsd:int">
+            <xsd:minInclusive value="1"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+</xsd:schema>
