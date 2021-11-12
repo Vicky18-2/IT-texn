@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Ticket.xsl"?>
+<tickets xmlns="http://nure/it-texn/pz"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://nure/it-texn/pz Ticket.xsd"
+         xmlns:tns="http://nure/it-texn/pz">
+
+    <tns:ticket id="1">
+
+        <tns:ticket_price>120.5</tns:ticket_price>
+
+        <tns:session>
+            <tns:session_date>2020-10-20</tns:session_date>
+            <tns:session_time>12:10:00</tns:session_time>
+        </tns:session>
+
+        <tns:film lang="RU">
+            <tns:title>The Emperor's</tns:title>
+            <tns:director>Fernan</tns:director>
+            <tns:film_duration>02:10:00</tns:film_duration>
+            <tns:description>Good film</tns:description>
+            <tns:genre>Mystery</tns:genre>
+            <tns:language>Russian</tns:language>
+        </tns:film>
+
+        <hall>
+            <tns:hall_type>3D</tns:hall_type>
+            <tns:column_id>1</tns:column_id>
+            <tns:seat_id>B</tns:seat_id>
+        </hall>
+
+    </tns:ticket>
+
+    <tns:ticket id="2">
+
+        <tns:ticket_price>150</tns:ticket_price>
+
+        <tns:session>
+            <tns:session_date>2020-11-20</tns:session_date>
+            <tns:session_time>13:00:00</tns:session_time>
+        </tns:session>
+
+        <tns:film lang="RU">
+            <tns:title>King</tns:title>
+            <tns:director>Kerdl</tns:director>
+            <tns:film_duration>02:00:00</tns:film_duration>
+            <tns:description>Not good film</tns:description>
+            <tns:genre>Comedy</tns:genre>
+            <tns:language>English</tns:language>
+        </tns:film>
+
+        <hall>
+            <tns:hall_type>2D</tns:hall_type>
+            <tns:column_id>1</tns:column_id>
+            <tns:seat_id>A</tns:seat_id>
+        </hall>
+
+    </tns:ticket>
+
+</tickets>
+

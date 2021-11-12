@@ -4,6 +4,7 @@ package com.ITtexn.pz2.classes;
 import javax.xml.bind.annotation.XmlRegistry;
 
 
+
 @XmlRegistry
 public class ObjectFactory {
 
