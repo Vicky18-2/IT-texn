@@ -14,7 +14,7 @@
             <tns:session_time>12:10:00</tns:session_time>
         </tns:session>
 
-        <tns:film lang="RU">
+        <tns:film>
             <tns:title>The Emperor's</tns:title>
             <tns:director>Fernan</tns:director>
             <tns:film_duration>02:10:00</tns:film_duration>
@@ -36,11 +36,11 @@
         <tns:ticket_price>150</tns:ticket_price>
 
         <tns:session>
-            <tns:session_date>2020-11-20</tns:session_date>
-            <tns:session_time>13:00:00</tns:session_time>
+            <tns:session_date>2021-10-20</tns:session_date>
+            <tns:session_time>17:10:00</tns:session_time>
         </tns:session>
 
-        <tns:film lang="RU">
+        <tns:film>
             <tns:title>King</tns:title>
             <tns:director>Kerdl</tns:director>
             <tns:film_duration>02:00:00</tns:film_duration>

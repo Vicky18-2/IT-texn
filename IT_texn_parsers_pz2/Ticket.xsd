@@ -52,7 +52,6 @@
             <xsd:element name="genre" type="xsd:token" minOccurs="1"/>
             <xsd:element name="language"  minOccurs="0"/>
         </xsd:sequence>
-        <xsd:attribute name="lang" type="xsd:token"/>
     </xsd:complexType>
 
     <xsd:simpleType name="description">
@@ -73,13 +72,6 @@
         </xsd:restriction>
     </xsd:simpleType>
 
-
-    <xsd:simpleType name="lang">
-        <xsd:restriction base="xsd:token">
-            <xsd:maxLength value="3"/>
-        </xsd:restriction>
-    </xsd:simpleType>
-
     <xsd:complexType name="hall">
         <xsd:sequence>
             <xsd:element name="hall_type" type="xsd:string" minOccurs="1"/>
@@ -95,7 +87,7 @@
     </xsd:simpleType>
 
     <xsd:simpleType name="seat_id">
-        <xsd:restriction base="tns:lang">
+        <xsd:restriction base="xsd:string">
             <xsd:pattern value="[A-P]"/>
         </xsd:restriction>
     </xsd:simpleType>

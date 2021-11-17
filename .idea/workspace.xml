@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dfba034b-8629-47a0-8fe6-9812826f8f47" name="Changes" comment="Merging and refactoring of pz1 and pz2">
-      <change beforePath="$PROJECT_DIR$/IT_texn_XML_pz1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/IT_texn_XML_pz1/.idea/vcs.xml" afterDir="false" />
-    </list>
+    <list default="true" id="dfba034b-8629-47a0-8fe6-9812826f8f47" name="Changes" comment="Merging and refactoring of pz1 and pz2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,15 +94,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/IT_texn_XML_pz1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/IT_texn_parsers_pz2" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Viktoriia\IdeaProjects\IT-texn\IT_texn_parsers_pz2" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Viktoriia\IdeaProjects\IT-texn\IT_texn_parsers_pz2\src\main\java" />
       <recent name="C:\Users\Viktoriia\IdeaProjects\IT-texn\src\com\ITtexn\pz1" />
@@ -152,6 +152,7 @@
       <workItem from="1636631623090" duration="319000" />
       <workItem from="1636631950962" duration="7948000" />
       <workItem from="1636700642591" duration="1376000" />
+      <workItem from="1636706467185" duration="115000" />
     </task>
     <task id="LOCAL-00001" summary="Updated xml and xmd schema">
       <created>1636555953731</created>
@@ -181,7 +182,21 @@
       <option name="project" value="LOCAL" />
       <updated>1636702122988</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Merging and refactoring of pz1 and pz2">
+      <created>1636706539115</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1636706539115</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Merging and refactoring of pz1 and pz2">
+      <created>1636706575615</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1636706575615</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

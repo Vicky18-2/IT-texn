@@ -44,10 +44,7 @@ public class Film {
     protected String genre;
     @XmlElement(namespace = "http://nure/it-texn/pz")
     protected Object language;
-    @XmlAttribute(name = "lang")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    @XmlSchemaType(name = "token")
-    protected String lang;
+
 
     public String getTitle() {
         return title;
@@ -95,14 +92,6 @@ public class Film {
 
     public void setLanguage(Object value) {
         this.language = value;
-    }
-
-    public String getLang() {
-        return lang;
-    }
-
-    public void setLang(String value) {
-        this.lang = value;
     }
 
 }
