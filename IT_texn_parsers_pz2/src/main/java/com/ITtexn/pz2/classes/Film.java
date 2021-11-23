@@ -2,16 +2,15 @@
 package com.ITtexn.pz2.classes;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -35,7 +34,7 @@ public class Film {
     protected List<String> director;
     @XmlElement(name = "film_duration", namespace = "http://nure/it-texn/pz", required = true)
     @XmlSchemaType(name = "time")
-    protected XMLGregorianCalendar filmDuration;
+    protected Calendar filmDuration;
     @XmlElement(namespace = "http://nure/it-texn/pz")
     protected String description;
     @XmlElement(namespace = "http://nure/it-texn/pz", required = true)
@@ -54,6 +53,10 @@ public class Film {
         this.title = value;
     }
 
+    public void setDirector(List<String> director) {
+        this.director = director;
+    }
+
     public List<String> getDirector() {
         if (director == null) {
             director = new ArrayList<String>();
@@ -62,11 +65,11 @@ public class Film {
     }
 
 
-    public XMLGregorianCalendar getFilmDuration() {
+    public Calendar getFilmDuration() {
         return filmDuration;
     }
 
-    public void setFilmDuration(XMLGregorianCalendar value) {
+    public void setFilmDuration(Calendar value) {
         this.filmDuration = value;
     }
 

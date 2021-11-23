@@ -23,11 +23,11 @@
             <tns:language>Russian</tns:language>
         </tns:film>
 
-        <hall>
+        <tns:hall>
             <tns:hall_type>3D</tns:hall_type>
             <tns:column_id>1</tns:column_id>
             <tns:seat_id>B</tns:seat_id>
-        </hall>
+        </tns:hall>
 
     </tns:ticket>
 
