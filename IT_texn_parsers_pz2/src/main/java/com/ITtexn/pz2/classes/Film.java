@@ -1,8 +1,10 @@
 
 package com.ITtexn.pz2.classes;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -33,8 +35,8 @@ public class Film {
     @XmlSchemaType(name = "token")
     protected List<String> director;
     @XmlElement(name = "film_duration", namespace = "http://nure/it-texn/pz", required = true)
-    @XmlSchemaType(name = "time")
-    protected Calendar filmDuration;
+    @XmlSchemaType(name = "string")
+    protected String filmDuration;
     @XmlElement(namespace = "http://nure/it-texn/pz")
     protected String description;
     @XmlElement(namespace = "http://nure/it-texn/pz", required = true)
@@ -64,12 +66,23 @@ public class Film {
         return this.director;
     }
 
+    @Override
+    public String toString() {
+        return "Film{" +
+                "title='" + title + '\'' +
+                ", director=" + director +
+                ", filmDuration='" + filmDuration + '\'' +
+                ", description='" + description + '\'' +
+                ", genre='" + genre + '\'' +
+                ", language=" + language +
+                '}';
+    }
 
-    public Calendar getFilmDuration() {
+    public String getFilmDuration() {
         return filmDuration;
     }
 
-    public void setFilmDuration(Calendar value) {
+    public void setFilmDuration(String value) {
         this.filmDuration = value;
     }
 

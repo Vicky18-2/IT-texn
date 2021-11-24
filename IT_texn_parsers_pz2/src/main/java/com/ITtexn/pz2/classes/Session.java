@@ -7,7 +7,11 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.sql.Time;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -20,28 +24,36 @@ public class Session {
 
     @XmlElement(name = "session_date", namespace = "http://nure/it-texn/pz")
     @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar sessionDate;
+    protected Date sessionDate;
     @XmlElement(name = "session_time", namespace = "http://nure/it-texn/pz")
     @XmlSchemaType(name = "time")
-    protected XMLGregorianCalendar sessionTime;
+    protected String sessionTime;
     @XmlElement(name = "session_date_and_time", namespace = "http://nure/it-texn/pz")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar sessionDateAndTime;
 
+    @Override
+    public String toString() {
+        return "Session{" +
+                "sessionDate=" + sessionDate +
+                ", sessionTime='" + sessionTime + '\'' +
+                ", sessionDateAndTime=" + sessionDateAndTime +
+                '}';
+    }
 
-    public XMLGregorianCalendar getSessionDate() {
+    public Date getSessionDate() {
         return sessionDate;
     }
 
-    public void setSessionDate(XMLGregorianCalendar value) {
+    public void setSessionDate(Date value) {
         this.sessionDate = value;
     }
 
-    public XMLGregorianCalendar getSessionTime() {
+    public String getSessionTime() {
         return sessionTime;
     }
 
-    public void setSessionTime(XMLGregorianCalendar value) {
+    public void setSessionTime(String value) {
         this.sessionTime = value;
     }
 

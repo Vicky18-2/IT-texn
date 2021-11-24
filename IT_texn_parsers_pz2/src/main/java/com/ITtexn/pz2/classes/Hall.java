@@ -27,6 +27,15 @@ public class Hall {
     @XmlSchemaType(name = "token")
     protected String seatId;
 
+    @Override
+    public String toString() {
+        return "Hall{" +
+                "hallType='" + hallType + '\'' +
+                ", columnId=" + columnId +
+                ", seatId='" + seatId + '\'' +
+                '}';
+    }
+
     public String getHallType() {
         return hallType;
     }

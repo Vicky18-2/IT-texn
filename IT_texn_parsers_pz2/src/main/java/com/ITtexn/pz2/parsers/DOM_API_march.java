@@ -61,7 +61,7 @@ public class DOM_API_march {
             String sessionTime = in.next();
 
 
-            System.out.println("Input the film duration in the format: YYYY-MM-DDTHH:MM:SS , where T is a constant");
+            System.out.println("Input the film duration in the format: HH:MM:SS");
             String filmDuration = in.next();
 
             System.out.println("Input the film name");

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tickets xmlns="http://nure/it-texn/pz">
+    <ticket id="1">
+        <ticket_price>344</ticket_price>
+        <session>
+            <session_date>2000-10-20+02:00</session_date>
+            <session_time>11:11:11</session_time>
+        </session>
+        <film>
+            <title>Film</title>
+            <director>Direc</director>
+            <director>tor</director>
+            <film_duration>01:11:11</film_duration>
+            <description>desc</description>
+            <genre>Comedy</genre>
+            <language>lang</language>
+        </film>
+        <hall>
+            <hall_type>3D</hall_type>
+            <column_id>1</column_id>
+            <seat_id>F</seat_id>
+        </hall>
+    </ticket>
+</tickets>

@@ -19,6 +19,10 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "tickets", namespace = "http://nure/it-texn/pz")
 public class Tickets {
 
+    public void setTicket(List<Ticket> ticket) {
+        this.ticket = ticket;
+    }
+
     @XmlElement(namespace = "http://nure/it-texn/pz", required = true)
     protected List<Ticket> ticket;
 

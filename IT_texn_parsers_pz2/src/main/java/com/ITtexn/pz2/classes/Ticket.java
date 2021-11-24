@@ -67,4 +67,14 @@ public class Ticket {
         this.id = value;
     }
 
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "ticketPrice=" + ticketPrice +
+                ", session=" + session +
+                ", film=" + film +
+                ", hall=" + hall +
+                ", id=" + id +
+                '}';
+    }
 }

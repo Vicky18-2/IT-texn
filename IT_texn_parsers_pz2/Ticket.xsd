@@ -37,7 +37,7 @@
         <xsd:choice>
             <xsd:sequence minOccurs="0">
                 <xsd:element name="session_date" type="xsd:date"/>
-                <xsd:element name="session_time" type="xsd:time"/>
+                <xsd:element name="session_time" type="xsd:string"/>
             </xsd:sequence>
             <xsd:element name="session_date_and_time" type="xsd:dateTime" minOccurs="0"/>
         </xsd:choice>
@@ -47,10 +47,10 @@
         <xsd:sequence>
             <xsd:element name="title" type="xsd:token" minOccurs="1"/>
             <xsd:element name="director" type="xsd:token" minOccurs="1" maxOccurs="2"/>
-            <xsd:element name="film_duration" type="xsd:time" minOccurs="1"/>
+            <xsd:element name="film_duration" type="xsd:string" minOccurs="0"/>
             <xsd:element name="description" type="xsd:string" minOccurs="0"/>
             <xsd:element name="genre" type="xsd:token" minOccurs="1"/>
-            <xsd:element name="language"  minOccurs="0"/>
+            <xsd:element name="language" type="xsd:string" minOccurs="0"/>
         </xsd:sequence>
     </xsd:complexType>
 
