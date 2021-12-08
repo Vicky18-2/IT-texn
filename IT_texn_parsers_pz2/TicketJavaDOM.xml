@@ -1,39 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><tickets xmlns="http://nure/it-texn/pz" xmlns:tns="http://nure/it-texn/pz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nure/it-texn/pz Ticket.xsd"> <tns:ticket id="1">
-<tns:ticket_price>2000</tns:ticket_price>
-<tns:session><tns:session_date>2000-10-20</tns:session_date>
-<tns:session_time>11:11:11</tns:session_time>
+<tns:ticket_price>57</tns:ticket_price>
+<tns:session>	<tns:session_date>2000-10-20</tns:session_date>
+	<tns:session_time>11:11:11</tns:session_time>
 </tns:session>
 <tns:film>
-<tns:title>nam</tns:title>
-<tns:director>[dir, ddd]</tns:director>
-<tns:film_duration>02:02:02</tns:film_duration>
-<tns:description>desc</tns:description>
-<tns:genre>Comedy</tns:genre>
-<tns:language>ru</tns:language>
+	<tns:title>name</tns:title>
+	<tns:director>[dir, tor]</tns:director>
+	<tns:film_duration>11:11:11</tns:film_duration>
+	<tns:description>desc</tns:description>
+	<tns:genre>Comedy</tns:genre>
+	<tns:language>ru</tns:language>
 </tns:film>
 <tns:hall>
-<tns:hall_type>3D</tns:hall_type>
-<tns:column_id>1</tns:column_id>
-<tns:seat_id>A</tns:seat_id>
-</tns:hall>
-</tns:ticket>
- <tns:ticket id="2">
-<tns:ticket_price>2000</tns:ticket_price>
-<tns:session><tns:session_date>2000-10-20</tns:session_date>
-<tns:session_time>11:11:11</tns:session_time>
-</tns:session>
-<tns:film>
-<tns:title>rip</tns:title>
-<tns:director>[dir, dd]</tns:director>
-<tns:film_duration>01:01:01</tns:film_duration>
-<tns:description>desc</tns:description>
-<tns:genre>gg</tns:genre>
-<tns:language>lan</tns:language>
-</tns:film>
-<tns:hall>
-<tns:hall_type>3D</tns:hall_type>
-<tns:column_id>1</tns:column_id>
-<tns:seat_id>R</tns:seat_id>
+	<tns:hall_type>3D</tns:hall_type>
+	<tns:column_id>4</tns:column_id>
+	<tns:seat_id>D</tns:seat_id>
 </tns:hall>
 </tns:ticket>
  </tickets>

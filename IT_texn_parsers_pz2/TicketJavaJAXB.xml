@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <tickets xmlns="http://nure/it-texn/pz">
     <ticket id="1">
-        <ticket_price>344</ticket_price>
+        <ticket_price>57</ticket_price>
         <session>
-            <session_date>2000-10-20+02:00</session_date>
-            <session_time>11:11:11</session_time>
+            <session_date>2000-11-20+02:00</session_date>
+            <session_time>11:00:00</session_time>
         </session>
         <film>
-            <title>Film</title>
-            <director>Direc</director>
+            <title>film</title>
+            <director>dit</director>
             <director>tor</director>
-            <film_duration>01:11:11</film_duration>
-            <description>desc</description>
+            <film_duration>02:02:02</film_duration>
+            <description>desco</description>
             <genre>Comedy</genre>
-            <language>lang</language>
+            <language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">eu</language>
         </film>
         <hall>
             <hall_type>3D</hall_type>
-            <column_id>1</column_id>
-            <seat_id>F</seat_id>
+            <column_id>4</column_id>
+            <seat_id>E</seat_id>
         </hall>
     </ticket>
 </tickets>

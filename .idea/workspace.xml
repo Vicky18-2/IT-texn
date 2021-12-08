@@ -1,92 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfba034b-8629-47a0-8fe6-9812826f8f47" name="Changes" comment="Merging and refactoring of pz1 and pz2" />
+    <list default="true" id="2bd67ca5-6f36-4dc0-bb90-8f2156b749c6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT_texn_parsers_pz2/${project.build.directory}/classes/com/ITtexn/pz2/parsers/DOM_API_march.class" beforeDir="false" afterPath="$PROJECT_DIR$/IT_texn_parsers_pz2/${project.build.directory}/classes/com/ITtexn/pz2/parsers/DOM_API_march.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT_texn_parsers_pz2/${project.build.directory}/classes/com/ITtexn/pz2/parsers/JAXB_API_march.class" beforeDir="false" afterPath="$PROJECT_DIR$/IT_texn_parsers_pz2/${project.build.directory}/classes/com/ITtexn/pz2/parsers/JAXB_API_march.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT_texn_parsers_pz2/${project.build.directory}/classes/com/ITtexn/pz2/parsers/JAXB_API_unmarch.class" beforeDir="false" afterPath="$PROJECT_DIR$/IT_texn_parsers_pz2/${project.build.directory}/classes/com/ITtexn/pz2/parsers/JAXB_API_unmarch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT_texn_parsers_pz2/TicketJavaDOM.xml" beforeDir="false" afterPath="$PROJECT_DIR$/IT_texn_parsers_pz2/TicketJavaDOM.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT_texn_parsers_pz2/TicketJavaJAXB.xml" beforeDir="false" afterPath="$PROJECT_DIR$/IT_texn_parsers_pz2/TicketJavaJAXB.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT_texn_parsers_pz2/src/main/java/com/ITtexn/pz2/parsers/DOM_API_march.java" beforeDir="false" afterPath="$PROJECT_DIR$/IT_texn_parsers_pz2/src/main/java/com/ITtexn/pz2/parsers/DOM_API_march.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="FxmlFile" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="XML_&amp;_XSD" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
-  <component name="ProjectId" id="1yrYuzpp2ZikhebWND12mAObFIB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="untitled104" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="untitled104" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="untitled104" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="untitled104" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="untitled104" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="company" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-    </panes>
-  </component>
+  <component name="ProjectId" id="21xApPITjs2iwwuq1GPQgeOjsPL" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -95,108 +32,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/IT_texn_parsers_pz2" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Viktoriia\IdeaProjects\IT-texn\IT_texn_parsers_pz2" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Viktoriia\IdeaProjects\IT-texn\IT_texn_parsers_pz2\src\main\java" />
-      <recent name="C:\Users\Viktoriia\IdeaProjects\IT-texn\src\com\ITtexn\pz1" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.ITtexn.Main" />
-      <module name="IT-texn" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="dfba034b-8629-47a0-8fe6-9812826f8f47" name="Changes" comment="" />
-      <created>1633011409158</created>
+      <changelist id="2bd67ca5-6f36-4dc0-bb90-8f2156b749c6" name="Changes" comment="" />
+      <created>1638872548674</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1633011409158</updated>
-      <workItem from="1635234100450" duration="637000" />
-      <workItem from="1635261058320" duration="722000" />
-      <workItem from="1635263844167" duration="1566000" />
-      <workItem from="1635273529476" duration="711000" />
-      <workItem from="1635320620943" duration="1115000" />
-      <workItem from="1635334549409" duration="4568000" />
-      <workItem from="1635513310741" duration="54000" />
-      <workItem from="1635756019276" duration="617000" />
-      <workItem from="1636460224464" duration="4170000" />
-      <workItem from="1636481695982" duration="786000" />
-      <workItem from="1636529397096" duration="6211000" />
-      <workItem from="1636539321784" duration="24351000" />
-      <workItem from="1636567077225" duration="448000" />
-      <workItem from="1636610782192" duration="6453000" />
-      <workItem from="1636631623090" duration="319000" />
-      <workItem from="1636631950962" duration="7948000" />
-      <workItem from="1636700642591" duration="1376000" />
-      <workItem from="1636706467185" duration="115000" />
+      <updated>1638872548674</updated>
+      <workItem from="1638872551342" duration="85000" />
     </task>
-    <task id="LOCAL-00001" summary="Updated xml and xmd schema">
-      <created>1636555953731</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1636555953731</updated>
-    </task>
-    <task id="LOCAL-00002" summary="XSL code + css file + modified XML file">
-      <created>1636567114114</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1636567114114</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Refactoring of the directories of the files">
-      <created>1636567443456</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1636567443456</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Merging and refactoring of pz1 and pz2">
-      <created>1636702122988</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1636702122988</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Merging and refactoring of pz1 and pz2">
-      <created>1636706539115</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1636706539115</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Merging and refactoring of pz1 and pz2">
-      <created>1636706575615</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1636706575615</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,18 +58,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated xml and xmd schema" />
-    <MESSAGE value="XSL code + css file" />
-    <MESSAGE value="XSL code + css file + modified XML file" />
-    <MESSAGE value="Refactoring of the directories of the files" />
-    <MESSAGE value="Merging and refactoring of pz1 and pz2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merging and refactoring of pz1 and pz2" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

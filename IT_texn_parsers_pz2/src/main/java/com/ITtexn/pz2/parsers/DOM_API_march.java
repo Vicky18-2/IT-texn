@@ -97,25 +97,25 @@ public class DOM_API_march {
                     + "\t<tns:session_time>" + sessionTime + "</tns:session_time>\n"
                     + "</tns:session>\n"
                     + "<tns:film>\n"
-                    + "<\ttns:title>" + title + "</tns:title>\n"
-                    + "<\ttns:director>" + director + "</tns:director>\n"
-                    + "<\ttns:film_duration>" + filmDuration + "</tns:film_duration>\n"
-                    + "<\ttns:description>" + description + "</tns:description>\n"
-                    + "<\ttns:genre>" + genre + "</tns:genre>\n"
-                    + "<\ttns:language>" + language + "</tns:language>\n"
+                    + "\t<tns:title>" + title + "</tns:title>\n"
+                    + "\t<tns:director>" + director + "</tns:director>\n"
+                    + "\t<tns:film_duration>" + filmDuration + "</tns:film_duration>\n"
+                    + "\t<tns:description>" + description + "</tns:description>\n"
+                    + "\t<tns:genre>" + genre + "</tns:genre>\n"
+                    + "\t<tns:language>" + language + "</tns:language>\n"
                     + "</tns:film>\n"
                     + "<tns:hall>\n"
-                    + "<\ttns:hall_type>" + hallType + "</tns:hall_type>\n"
-                    + "<\ttns:column_id>" + columnId + "</tns:column_id>\n"
-                    + "<\ttns:seat_id>" + seatId + "</tns:seat_id>\n"
+                    + "\t<tns:hall_type>" + hallType + "</tns:hall_type>\n"
+                    + "\t<tns:column_id>" + columnId + "</tns:column_id>\n"
+                    + "\t<tns:seat_id>" + seatId + "</tns:seat_id>\n"
                     + "</tns:hall>\n"
                     + "</tns:ticket>\n";
 
         }
-            outputXML = "\n<tickets xmlns=\"http://nure/it-texn/pz\"\n" +
+            outputXML = "<tickets xmlns=\"http://nure/it-texn/pz\"\n" +
                     "         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
                     "         xsi:schemaLocation=\"http://nure/it-texn/pz Ticket.xsd\"\n" +
-                    "         xmlns:tns=\"http://nure/it-texn/pz\"\n>" + toStringXML(rootBody) + "<\n/tickets>";
+                    "         xmlns:tns=\"http://nure/it-texn/pz\"\n>" + toStringXML(rootBody) + "</tickets>";
 
         return outputXML;
     }
