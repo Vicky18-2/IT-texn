@@ -1,48 +1,36 @@
 
 package com.ITtexn.pz3.service.film;
 
-import java.text.DateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 public class Film  {
 
-//    @XmlElement(namespace = "http://nure/it-texn/pz", required = true)
-//    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-//    @XmlSchemaType(name = "token")
+
     protected String title;
-//    @XmlElement(namespace = "http://nure/it-texn/pz", required = true)
-//    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-//    @XmlSchemaType(name = "token")
+
     protected List<String> director;
-//    @XmlElement(name = "film_duration", namespace = "http://nure/it-texn/pz", required = true)
-//    @XmlSchemaType(name = "string")
+
     protected String filmDuration;
-//    @XmlElement(namespace = "http://nure/it-texn/pz")
-    protected String description;
-//    @XmlElement(namespace = "http://nure/it-texn/pz", required = true)
-//    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-//    @XmlSchemaType(name = "token")
-    protected String genre;
-//    @XmlElement(namespace = "http://nure/it-texn/pz")
+
+    protected String description12;
+
     protected String language;
 
-    public int getId() {
-        return id;
+    protected int id_film;
+
+    protected String genre;
+
+
+
+    public void setId_film(int id_film) {
+        this.id_film = id_film;
     }
 
-    protected int id;
-
+    public int getId_film() {
+        return id_film;
+    }
 
     public String getTitle() {
         return title;
@@ -69,9 +57,10 @@ public class Film  {
                 "title='" + title + '\'' +
                 ", director=" + director +
                 ", filmDuration='" + filmDuration + '\'' +
-                ", description='" + description + '\'' +
+                ", description='" + description12 + '\'' +
                 ", genre='" + genre + '\'' +
-                ", language=" + language +
+                ", language='" + language + '\'' +
+                ", id=" + id_film +
                 '}';
     }
 
@@ -83,12 +72,12 @@ public class Film  {
         this.filmDuration = value;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDescription12() {
+        return description12;
     }
 
-    public void setDescription(String value) {
-        this.description = value;
+    public void setDescription12(String value) {
+        this.description12 = value;
     }
 
     public String getGenre() {
@@ -99,7 +88,7 @@ public class Film  {
         this.genre = value;
     }
 
-    public Object getLanguage() {
+    public String getLanguage() {
         return language;
     }
 
@@ -111,11 +100,12 @@ public class Film  {
 
     };
 
-    public Film(int id, String title, String filmDuration, String description, String genre, String language){
-        this.id = id;
+    public Film(int id_film, String title, List<String> director, String filmDuration, String description12, String genre, String language){
+        this.id_film = id_film;
         this.title = title;
+        this.director = director;
         this.filmDuration=filmDuration;
-        this.description = description;
+        this.description12 = description12;
         this.genre=genre;
         this.language=language;
 

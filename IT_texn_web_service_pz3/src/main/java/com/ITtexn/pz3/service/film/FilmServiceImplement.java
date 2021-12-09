@@ -13,27 +13,32 @@ public class FilmServiceImplement implements FilmService {
     @Inject
     protected FilmCreation filmCreation;
 
-    @WebMethod
-    public Film getFilm(int id) {
-        return filmCreation.getFilm(id);
+    public FilmServiceImplement() {
+        this.filmCreation = new FilmCreation();
     }
 
     @WebMethod
-    public Film updateFilm(int id, String title, String filmDuration, String description, String genre, String language) {
-        return filmCreation.updateFilm(id,title,filmDuration,description,genre,language);
+    public Film getFilm(int id_film) {
+        return filmCreation.getFilm(id_film);
     }
 
     @WebMethod
-    public Film deleteFilm(int id) {
-        return filmCreation.deleteFilm(id);
+    public Film updateFilm(int id_film, String title,List<String> director, String filmDuration, String description, String genre, String language) {
+        return filmCreation.updateFilm(id_film,title,director,filmDuration,description,genre,language);
     }
 
     @WebMethod
-    public Film insertFilm(int id, String title, String filmDuration, String description, String genre, String language) {
-        return filmCreation.insertFilm(id,title,filmDuration,description,genre,language);
+    public Film deleteFilm(int id_film) {
+        return filmCreation.deleteFilm(id_film);
     }
 
     @WebMethod
+    public void insertFilm(int id_film, String title, List<String> director,String filmDuration, String description, String genre, String language) {
+         filmCreation.insertFilm(id_film,title,director,filmDuration,description,genre,language);
+    }
+
+    @WebMethod
+    @Override
     public List<Film> getAllFilms() {
         return filmCreation.getAllFilmList();
     }

@@ -2,7 +2,6 @@ package com.ITtexn.pz3.service.film;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class FilmCreation extends Film {
 
@@ -13,57 +12,43 @@ public class FilmCreation extends Film {
     }
 
     public FilmCreation() {
-//        filmList = new ArrayList<>();
-//        Scanner in = new Scanner(System.in);
-//        int n = in.nextInt();
-//        for (int i = 0; i < n; i++) {
-//            id = in.nextInt();
-//            title = in.next();
-//            filmDuration = in.next();
-//            description = in.next();
-//            genre = in.next();
-//            language = in.next();
-//            filmList.add(new Film(id, title, filmDuration, description, genre, language));
-//        }
-
         filmList = new ArrayList<>();
-        filmList.add(new Film(1, "Title", "01:01:01", "description", "Comedy", "RU"));
-
-
+        List<String> dirList= new ArrayList<>();
+        dirList.add("dir");
+        filmList.add(new Film(1, "Title",dirList, "01:01:01", "description", "Comedy", "RU"));
     }
 
-    public Film getFilm(int id) {
+    public Film getFilm(int id_film) {
         for (Film film : filmList) {
-            if (film.getId() == id) {
+            if (film.getId_film() == id_film) {
                 return film;
             }
         }
         return null;
     }
 
-    public Film updateFilm(int id, String name, String filmDuration, String description, String genre, String language) {
+    public Film updateFilm(int id_film, String title,List<String> director, String filmDuration, String description, String genre, String language) {
         for (Film film : filmList) {
-            if (film.getId() == id) {
+            if (film.getId_film() == id_film) {
                 film.setTitle(title);
                 film.setLanguage(language);
                 film.setFilmDuration(filmDuration);
                 film.setDirector(director);
-                film.setDescription(description);
+                film.setDescription12(description);
                 film.setGenre(genre);
             }
         }
         return null;
     }
 
-    public Film insertFilm(int id, String name, String filmDuration, String description, String genre, String language){
-        Film film= new Film(id, title, filmDuration, description, genre, language);
+    public void insertFilm(int id_film, String title, List<String> director, String filmDuration, String description, String genre, String language){
+        Film film= new Film(id_film, title, director,filmDuration, description, genre, language);
         filmList.add(film);
-        return film;
     }
 
-    public Film deleteFilm(int id){
+    public Film deleteFilm(int id_film){
         for(Film film: filmList){
-            if(film.getId() == id){
+            if(film.getId_film() == id_film){
                 filmList.remove(film);
             }
         }

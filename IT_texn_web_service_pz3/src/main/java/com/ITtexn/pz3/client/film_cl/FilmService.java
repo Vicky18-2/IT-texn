@@ -29,12 +29,12 @@ public interface FilmService {
      * 
      * @param arg0
      * @return
-     *     returns com.ITtexn.pz3.client.Film
+     *     returns com.ITtexn.pz3.client.film_cl.Film
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getFilm", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.GetFilm")
-    @ResponseWrapper(localName = "getFilmResponse", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.GetFilmResponse")
+    @RequestWrapper(localName = "getFilm", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.film_cl.GetFilm")
+    @ResponseWrapper(localName = "getFilmResponse", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.film_cl.GetFilmResponse")
     @Action(input = "http://film.service.pz3.ITtexn.com/FilmService/getFilmRequest", output = "http://film.service.pz3.ITtexn.com/FilmService/getFilmResponse")
     public Film getFilm(
         @WebParam(name = "arg0", targetNamespace = "")
@@ -48,13 +48,14 @@ public interface FilmService {
      * @param arg4
      * @param arg1
      * @param arg0
+     * @param arg6
      * @return
-     *     returns com.ITtexn.pz3.client.Film
+     *     returns com.ITtexn.pz3.client.film_cl.Film
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "updateFilm", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.UpdateFilm")
-    @ResponseWrapper(localName = "updateFilmResponse", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.UpdateFilmResponse")
+    @RequestWrapper(localName = "updateFilm", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.film_cl.UpdateFilm")
+    @ResponseWrapper(localName = "updateFilmResponse", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.film_cl.UpdateFilmResponse")
     @Action(input = "http://film.service.pz3.ITtexn.com/FilmService/updateFilmRequest", output = "http://film.service.pz3.ITtexn.com/FilmService/updateFilmResponse")
     public Film updateFilm(
         @WebParam(name = "arg0", targetNamespace = "")
@@ -62,55 +63,27 @@ public interface FilmService {
         @WebParam(name = "arg1", targetNamespace = "")
         String arg1,
         @WebParam(name = "arg2", targetNamespace = "")
-        String arg2,
+        List<String> arg2,
         @WebParam(name = "arg3", targetNamespace = "")
         String arg3,
         @WebParam(name = "arg4", targetNamespace = "")
         String arg4,
         @WebParam(name = "arg5", targetNamespace = "")
-        String arg5);
+        String arg5,
+        @WebParam(name = "arg6", targetNamespace = "")
+        String arg6);
 
     /**
      * 
      * @return
-     *     returns java.util.List<com.ITtexn.pz3.client.Film>
+     *     returns java.util.List<com.ITtexn.pz3.client.film_cl.Film>
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getAllFilms", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.GetAllFilms")
-    @ResponseWrapper(localName = "getAllFilmsResponse", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.GetAllFilmsResponse")
+    @RequestWrapper(localName = "getAllFilms", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.film_cl.GetAllFilms")
+    @ResponseWrapper(localName = "getAllFilmsResponse", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.film_cl.GetAllFilmsResponse")
     @Action(input = "http://film.service.pz3.ITtexn.com/FilmService/getAllFilmsRequest", output = "http://film.service.pz3.ITtexn.com/FilmService/getAllFilmsResponse")
     public List<Film> getAllFilms();
-
-    /**
-     * 
-     * @param arg3
-     * @param arg2
-     * @param arg5
-     * @param arg4
-     * @param arg1
-     * @param arg0
-     * @return
-     *     returns com.ITtexn.pz3.client.Film
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "insertFilm", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.InsertFilm")
-    @ResponseWrapper(localName = "insertFilmResponse", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.InsertFilmResponse")
-    @Action(input = "http://film.service.pz3.ITtexn.com/FilmService/insertFilmRequest", output = "http://film.service.pz3.ITtexn.com/FilmService/insertFilmResponse")
-    public Film insertFilm(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        String arg1,
-        @WebParam(name = "arg2", targetNamespace = "")
-        String arg2,
-        @WebParam(name = "arg3", targetNamespace = "")
-        String arg3,
-        @WebParam(name = "arg4", targetNamespace = "")
-        String arg4,
-        @WebParam(name = "arg5", targetNamespace = "")
-        String arg5);
 
     /**
      * 
@@ -120,7 +93,7 @@ public interface FilmService {
     @WebMethod
     @WebResult(targetNamespace = "")
     @RequestWrapper(localName = "countFilms", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.film_cl.CountFilms")
-    @ResponseWrapper(localName = "countFilmsResponse", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.CountFilmsResponse")
+    @ResponseWrapper(localName = "countFilmsResponse", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.film_cl.CountFilmsResponse")
     @Action(input = "http://film.service.pz3.ITtexn.com/FilmService/countFilmsRequest", output = "http://film.service.pz3.ITtexn.com/FilmService/countFilmsResponse")
     public int countFilms();
 
@@ -128,15 +101,48 @@ public interface FilmService {
      * 
      * @param arg0
      * @return
-     *     returns com.ITtexn.pz3.client.Film
+     *     returns com.ITtexn.pz3.client.film_cl.Film
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "deleteFilm", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.DeleteFilm")
-    @ResponseWrapper(localName = "deleteFilmResponse", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.DeleteFilmResponse")
+    @RequestWrapper(localName = "deleteFilm", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.film_cl.DeleteFilm")
+    @ResponseWrapper(localName = "deleteFilmResponse", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.film_cl.DeleteFilmResponse")
     @Action(input = "http://film.service.pz3.ITtexn.com/FilmService/deleteFilmRequest", output = "http://film.service.pz3.ITtexn.com/FilmService/deleteFilmResponse")
     public Film deleteFilm(
         @WebParam(name = "arg0", targetNamespace = "")
         int arg0);
+
+    /**
+     * 
+     * @param arg3
+     * @param arg2
+     * @param arg5
+     * @param arg4
+     * @param arg1
+     * @param arg0
+     * @param arg6
+     * @return
+     *     returns com.ITtexn.pz3.client.film_cl.Film
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "insertFilm", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.film_cl.InsertFilm")
+    @ResponseWrapper(localName = "insertFilmResponse", targetNamespace = "http://film.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.film_cl.InsertFilmResponse")
+    @Action(input = "http://film.service.pz3.ITtexn.com/FilmService/insertFilmRequest", output = "http://film.service.pz3.ITtexn.com/FilmService/insertFilmResponse")
+    public Film insertFilm(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1,
+        @WebParam(name = "arg2", targetNamespace = "")
+        List<String> arg2,
+        @WebParam(name = "arg3", targetNamespace = "")
+        String arg3,
+        @WebParam(name = "arg4", targetNamespace = "")
+        String arg4,
+        @WebParam(name = "arg5", targetNamespace = "")
+        String arg5,
+        @WebParam(name = "arg6", targetNamespace = "")
+        String arg6);
 
 }
