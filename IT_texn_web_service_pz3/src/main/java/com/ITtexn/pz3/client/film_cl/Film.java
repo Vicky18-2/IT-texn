@@ -6,6 +6,7 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -22,7 +23,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="description12" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="director" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
  *         &lt;element name="filmDuration" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="genre" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="genre" type="{http://film.service.pz3.ITtexn.com/}genre" minOccurs="0"/>
  *         &lt;element name="id_film" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="language" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="title" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -50,7 +51,8 @@ public class Film {
     @XmlElement(nillable = true)
     protected List<String> director;
     protected String filmDuration;
-    protected String genre;
+    @XmlSchemaType(name = "string")
+    protected Genre genre;
     @XmlElement(name = "id_film")
     protected int idFilm;
     protected String language;
@@ -80,6 +82,19 @@ public class Film {
         this.description12 = value;
     }
 
+    @Override
+    public String toString() {
+        return "Film{" +
+                "description12='" + description12 + '\'' +
+                ", director=" + director +
+                ", filmDuration='" + filmDuration + '\'' +
+                ", genre=" + genre +
+                ", idFilm=" + idFilm +
+                ", language='" + language + '\'' +
+                ", title='" + title + '\'' +
+                '}';
+    }
+
     /**
      * Gets the value of the director property.
      * 
@@ -102,6 +117,8 @@ public class Film {
      * 
      * 
      */
+
+
     public List<String> getDirector() {
         if (director == null) {
             director = new ArrayList<String>();
@@ -138,10 +155,10 @@ public class Film {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Genre }
      *     
      */
-    public String getGenre() {
+    public Genre getGenre() {
         return genre;
     }
 
@@ -150,10 +167,10 @@ public class Film {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Genre }
      *     
      */
-    public void setGenre(String value) {
+    public void setGenre(Genre value) {
         this.genre = value;
     }
 
