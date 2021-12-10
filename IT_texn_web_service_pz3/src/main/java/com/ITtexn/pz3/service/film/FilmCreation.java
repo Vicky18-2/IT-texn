@@ -9,15 +9,16 @@ public class FilmCreation extends Film {
 
     private List<Film> filmList;
 
-    public List<Film> getAllFilmList() {
-        return filmList;
-    }
+
 
     public FilmCreation() {
         filmList = new ArrayList<>();
         List<String> dirList= new ArrayList<>();
         dirList.add("dir");
         filmList.add(new Film(1, "Title",dirList, "01:01:01", "description", Genre.fromValue("Comedy"), "RU"));
+    }
+    public List<Film> getAllFilmList() {
+        return filmList;
     }
 
     public Film getFilm(int id_film) {

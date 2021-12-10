@@ -39,7 +39,7 @@ public class HallServiceImplement implements HallService {
     }
 
     @WebMethod
-    public void countHall() {
-        hallCreation.countHall();
+    public int countHall() {
+       return hallCreation.countHall();
     }
 }

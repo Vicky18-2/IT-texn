@@ -20,6 +20,6 @@ public interface HallService {
     void deleteHall(int idHall);
 
     @WebMethod
-    void countHall();
+    int countHall();
 
 }

@@ -4,6 +4,8 @@ package com.ITtexn.pz3.client;
 import com.ITtexn.pz3.client.film_cl.FilmService;
 import com.ITtexn.pz3.client.film_cl.FilmServiceImplementService;
 import com.ITtexn.pz3.client.film_cl.Genre;
+import com.ITtexn.pz3.client.hall_cl.HallService;
+import com.ITtexn.pz3.client.hall_cl.HallServiceImplementService;
 
 
 import java.net.URL;
@@ -25,13 +27,22 @@ public class Connection {
         filmServiceProxy.deleteFilm(5);
         System.out.println(filmServiceProxy.getAllFilms());
         System.out.println(filmServiceProxy.countFilms());
-////
-//        URL urlHall = new URL("http://localhost:7777/hall?wsdl");
-//        HallServiceImplementService hallServiceImplementService = new HallServiceImplementService(urlHall);
-//        HallService hallService= hallServiceImplementService.getHallServiceImplementPort();
-//
+
+        URL urlHall = new URL("http://localhost:7777/hall?wsdl");
+        HallServiceImplementService hallServiceImplementService = new HallServiceImplementService(urlHall);
+        HallService hallService= hallServiceImplementService.getHallServiceImplementPort();
+
 //        ArrayList<Hall> allHalls = (ArrayList<Hall>) hallService.getAllHalls();
 //        System.out.println(allHalls);
+
+        hallService.insertHall(2,"3D",3,4);
+        System.out.println(hallService.getAllHalls());
+        hallService.updateHall(1,"5D",1,1);
+        System.out.println(hallService.getAllHalls());
+        hallService.deleteHall(2);
+        System.out.println(hallService.countHall());
+
+
 
     }
 
