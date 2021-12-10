@@ -1,6 +1,8 @@
 
 package com.ITtexn.pz3.service.film;
 
+import com.ITtexn.pz3.service.genre.Genre;
+
 import java.util.ArrayList;
 import java.util.List;
 

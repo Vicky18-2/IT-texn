@@ -1,5 +1,7 @@
 package com.ITtexn.pz3.service.film;
 
+import com.ITtexn.pz3.service.genre.Genre;
+
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import java.util.List;
@@ -18,18 +20,18 @@ public class FilmServiceImplement implements FilmService {
     }
 
     @WebMethod
-    public Film getFilm(int id_film) {
-        return filmCreation.getFilm(id_film);
+    public void getFilm(int id_film) {
+         filmCreation.getFilm(id_film);
     }
 
     @WebMethod
-    public Film updateFilm(int id_film, String title,List<String> director, String filmDuration, String description, String genre, String language) {
-        return filmCreation.updateFilm(id_film,title,director,filmDuration,description,genre,language);
+    public void updateFilm(int id_film, String title, List<String> director, String filmDuration, String description, String genre, String language) {
+        filmCreation.updateFilm(id_film,title,director,filmDuration,description,genre,language);
     }
 
     @WebMethod
-    public Film deleteFilm(int id_film) {
-        return filmCreation.deleteFilm(id_film);
+    public void deleteFilm(int id_film) {
+        filmCreation.deleteFilm(id_film);
     }
 
     @WebMethod
@@ -38,7 +40,6 @@ public class FilmServiceImplement implements FilmService {
     }
 
     @WebMethod
-    @Override
     public List<Film> getAllFilms() {
         return filmCreation.getAllFilmList();
     }

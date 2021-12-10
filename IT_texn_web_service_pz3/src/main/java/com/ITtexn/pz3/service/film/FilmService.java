@@ -1,5 +1,7 @@
 package com.ITtexn.pz3.service.film;
 
+import com.ITtexn.pz3.service.genre.Genre;
+
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import java.util.List;
@@ -8,16 +10,16 @@ import java.util.List;
 public interface FilmService {
 
     @WebMethod
-    Film getFilm(int id_film);
+    void getFilm(int id_film);
 
     @WebMethod
-    Film updateFilm(int id_film,String title, List<String> director, String filmDuration, String description, String genre, String language );
+    void updateFilm(int id_film,String title, List<String> director, String filmDuration, String description, String genre, String language );
 
     @WebMethod
-    Film deleteFilm(int id_film);
+    void deleteFilm(int id_film);
 
     @WebMethod
-    void insertFilm(int id_film,String title, List<String> director,String filmDuration, String description, String genre, String language);
+    void insertFilm(int id_film, String title, List<String> director, String filmDuration, String description, String genre, String language);
 
     @WebMethod
     List<Film> getAllFilms();

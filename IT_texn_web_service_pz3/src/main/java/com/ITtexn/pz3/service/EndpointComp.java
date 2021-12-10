@@ -3,6 +3,7 @@ package com.ITtexn.pz3.service;
 import com.ITtexn.pz3.service.film.FilmCreation;
 import com.ITtexn.pz3.service.film.FilmService;
 import com.ITtexn.pz3.service.film.FilmServiceImplement;
+import com.ITtexn.pz3.service.hall.HallServiceImplement;
 
 import javax.xml.ws.Endpoint;
 
@@ -12,7 +13,8 @@ public class EndpointComp {
         System.setProperty("com.sun.xml.ws.transport.http.HttpAdapter.dump", "true");
         System.setProperty("com.sun.xml.internal.ws.transport.http.HttpAdapter.dump", "true");
 
-        Endpoint filmEndpoint = Endpoint.publish("http://localhost:7777/film",new FilmServiceImplement());
+        Endpoint filmEndpointFilm = Endpoint.publish("http://localhost:7777/film", new FilmServiceImplement());
+        Endpoint filmEndpointHall = Endpoint.publish("http://localhost:7777/hall", new HallServiceImplement());
 
 //        FilmServiceImplement film = new FilmServiceImplement();
 //        FilmCreation createFilm = new FilmCreation();

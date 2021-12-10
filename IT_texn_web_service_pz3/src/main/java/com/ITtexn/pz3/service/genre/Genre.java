@@ -6,21 +6,21 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 
-@XmlType(name = "genre", namespace = "http://nure/it-texn/pz")
-@XmlEnum
+//@XmlType(name = "genre", namespace = "http://nure/it-texn/pz")
+//@XmlEnum
 public enum Genre {
 
-    @XmlEnumValue("Mystery")
+//    @XmlEnumValue("Mystery")
     MYSTERY("Mystery"),
-    @XmlEnumValue("Comedy")
+//    @XmlEnumValue("Comedy")
     COMEDY("Comedy"),
-    @XmlEnumValue("Fantasy")
+//    @XmlEnumValue("Fantasy")
     FANTASY("Fantasy"),
-    @XmlEnumValue("Fiction")
+//    @XmlEnumValue("Fiction")
     FICTION("Fiction"),
-    @XmlEnumValue("Drama")
+//    @XmlEnumValue("Drama")
     DRAMA("Drama"),
-    @XmlEnumValue("Horror")
+//    @XmlEnumValue("Horror")
     HORROR("Horror");
     private final String value;
 

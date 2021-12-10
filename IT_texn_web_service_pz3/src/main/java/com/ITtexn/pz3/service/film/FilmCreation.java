@@ -1,5 +1,7 @@
 package com.ITtexn.pz3.service.film;
 
+import com.ITtexn.pz3.service.genre.Genre;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +17,7 @@ public class FilmCreation extends Film {
         filmList = new ArrayList<>();
         List<String> dirList= new ArrayList<>();
         dirList.add("dir");
-        filmList.add(new Film(1, "Title",dirList, "01:01:01", "description", "Comedy", "RU"));
+        filmList.add(new Film(1, "Title",dirList, "01:01:01", "description", "COMEDY", "RU"));
     }
 
     public Film getFilm(int id_film) {
@@ -24,10 +26,11 @@ public class FilmCreation extends Film {
                 return film;
             }
         }
+
         return null;
     }
 
-    public Film updateFilm(int id_film, String title,List<String> director, String filmDuration, String description, String genre, String language) {
+    public void updateFilm(int id_film, String title,List<String> director, String filmDuration, String description, String genre, String language) {
         for (Film film : filmList) {
             if (film.getId_film() == id_film) {
                 film.setTitle(title);
@@ -38,7 +41,6 @@ public class FilmCreation extends Film {
                 film.setGenre(genre);
             }
         }
-        return null;
     }
 
     public void insertFilm(int id_film, String title, List<String> director, String filmDuration, String description, String genre, String language){
@@ -46,13 +48,9 @@ public class FilmCreation extends Film {
         filmList.add(film);
     }
 
-    public Film deleteFilm(int id_film){
-        for(Film film: filmList){
-            if(film.getId_film() == id_film){
-                filmList.remove(film);
-            }
-        }
-        return null;
+    public void deleteFilm(int id_film){
+       int index = filmList.lastIndexOf(getFilm(id_film));
+       filmList.remove(index);
     }
 
     public int count() {
