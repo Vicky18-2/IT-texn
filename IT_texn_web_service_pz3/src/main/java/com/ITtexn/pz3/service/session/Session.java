@@ -1,6 +1,9 @@
 
 package com.ITtexn.pz3.service.session;
 
+import com.ITtexn.pz3.service.film.Film;
+import com.ITtexn.pz3.service.hall.Hall;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -10,30 +13,33 @@ import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.Date;
 
 
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "session", namespace = "http://nure/it-texn/pz", propOrder = {
-    "sessionDate",
-    "sessionTime",
-    "sessionDateAndTime"
-})
+
+//@XmlAccessorType(XmlAccessType.FIELD)
+//@XmlType(name = "session", namespace = "http://nure/it-texn/pz", propOrder = {
+//    "sessionDate",
+//    "sessionTime",
+//    "sessionDateAndTime"
+//})
 public class Session {
 
-    @XmlElement(name = "session_date", namespace = "http://nure/it-texn/pz")
-    @XmlSchemaType(name = "date")
-    protected Date sessionDate;
-    @XmlElement(name = "session_time", namespace = "http://nure/it-texn/pz")
-    @XmlSchemaType(name = "time")
+    protected int idSession;
+
+    protected Date  sessionDate;
+
     protected String sessionTime;
-    @XmlElement(name = "session_date_and_time", namespace = "http://nure/it-texn/pz")
-    @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar sessionDateAndTime;
+
+    private Hall hall;
+
+    private Film film;
 
     @Override
     public String toString() {
         return "Session{" +
-                "sessionDate=" + sessionDate +
+                "idSession=" + idSession +
+                ", sessionDate=" + sessionDate +
                 ", sessionTime='" + sessionTime + '\'' +
-                ", sessionDateAndTime=" + sessionDateAndTime +
+                ", hall=" + hall +
+                ", film=" + film +
                 '}';
     }
 
@@ -53,12 +59,20 @@ public class Session {
         this.sessionTime = value;
     }
 
-    public XMLGregorianCalendar getSessionDateAndTime() {
-        return sessionDateAndTime;
+    public Hall getHall() {
+        return hall;
     }
 
-    public void setSessionDateAndTime(XMLGregorianCalendar value) {
-        this.sessionDateAndTime = value;
+    public Film getFilm() {
+        return film;
+    }
+
+    public void setHall(Hall hall) {
+        this.hall = hall;
+    }
+
+    public void setFilm(Film film) {
+        this.film = film;
     }
 
 }
