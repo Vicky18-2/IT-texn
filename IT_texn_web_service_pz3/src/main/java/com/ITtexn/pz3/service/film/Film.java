@@ -22,7 +22,7 @@ public class Film  {
 
     protected int id_film;
 
-    protected String genre;
+    protected Genre genre;
 
 
 
@@ -82,11 +82,11 @@ public class Film  {
         this.description12 = value;
     }
 
-    public String getGenre() {
+    public Genre getGenre() {
         return genre;
     }
 
-    public void setGenre(String value) {
+    public void setGenre(Genre value) {
         this.genre = value;
     }
 
@@ -102,7 +102,7 @@ public class Film  {
 
     };
 
-    public Film(int id_film, String title, List<String> director, String filmDuration, String description12, String genre, String language){
+    public Film(int id_film, String title, List<String> director, String filmDuration, String description12, Genre genre, String language){
         this.id_film = id_film;
         this.title = title;
         this.director = director;

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -23,7 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="arg2" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
  *         &lt;element name="arg3" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="arg4" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="arg5" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="arg5" type="{http://film.service.pz3.ITtexn.com/}genre" minOccurs="0"/>
  *         &lt;element name="arg6" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -50,7 +51,8 @@ public class UpdateFilm {
     protected List<String> arg2;
     protected String arg3;
     protected String arg4;
-    protected String arg5;
+    @XmlSchemaType(name = "string")
+    protected Genre arg5;
     protected String arg6;
 
     /**
@@ -175,10 +177,10 @@ public class UpdateFilm {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Genre }
      *     
      */
-    public String getArg5() {
+    public Genre getArg5() {
         return arg5;
     }
 
@@ -187,10 +189,10 @@ public class UpdateFilm {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Genre }
      *     
      */
-    public void setArg5(String value) {
+    public void setArg5(Genre value) {
         this.arg5 = value;
     }
 

@@ -25,7 +25,7 @@ public class FilmServiceImplement implements FilmService {
     }
 
     @WebMethod
-    public void updateFilm(int id_film, String title, List<String> director, String filmDuration, String description, String genre, String language) {
+    public void updateFilm(int id_film, String title, List<String> director, String filmDuration, String description, Genre genre, String language) {
         filmCreation.updateFilm(id_film,title,director,filmDuration,description,genre,language);
     }
 
@@ -35,7 +35,7 @@ public class FilmServiceImplement implements FilmService {
     }
 
     @WebMethod
-    public void insertFilm(int id_film, String title, List<String> director,String filmDuration, String description, String genre, String language) {
+    public void insertFilm(int id_film, String title, List<String> director,String filmDuration, String description, Genre genre, String language) {
          filmCreation.insertFilm(id_film,title,director,filmDuration,description,genre,language);
     }
 

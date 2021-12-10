@@ -3,6 +3,8 @@ package com.ITtexn.pz3.client;
 
 import com.ITtexn.pz3.client.film_cl.FilmService;
 import com.ITtexn.pz3.client.film_cl.FilmServiceImplementService;
+import com.ITtexn.pz3.client.film_cl.Genre;
+
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -14,13 +16,11 @@ public class Connection {
         FilmServiceImplementService filmServiceImplementService = new FilmServiceImplementService(urlFilm);
         FilmService filmServiceProxy = filmServiceImplementService.getFilmServiceImplementPort();
 
-        //  ArrayList<Film> allFilms = (ArrayList<Film>) filmServiceProxy.getAllFilms();
-       // System.out.println(allFilms);
         ArrayList<String> dir = new ArrayList<>();
         dir.add("Director");
-        filmServiceProxy.insertFilm(5, "FFF", dir, "01:11:11", "String", "COMEDY", "Tyy");
+        filmServiceProxy.insertFilm(5, "FFF", dir, "01:11:11", "String", Genre.fromValue("COMEDY"), "Tyy");
         System.out.println(filmServiceProxy.getAllFilms());
-        filmServiceProxy.updateFilm(5, "UPDATE11", dir, "01:11:11", "String", "MYSTERY", "Tyy");
+        filmServiceProxy.updateFilm(5, "UPDATE11", dir, "01:11:11", "String", Genre.fromValue("MYSTERY"), "Tyy");
         System.out.println(filmServiceProxy.getAllFilms());
         filmServiceProxy.deleteFilm(5);
         System.out.println(filmServiceProxy.getAllFilms());

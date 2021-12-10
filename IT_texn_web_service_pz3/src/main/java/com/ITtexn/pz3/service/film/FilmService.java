@@ -13,13 +13,13 @@ public interface FilmService {
     void getFilm(int id_film);
 
     @WebMethod
-    void updateFilm(int id_film,String title, List<String> director, String filmDuration, String description, String genre, String language );
+    void updateFilm(int id_film,String title, List<String> director, String filmDuration, String description, Genre genre, String language );
 
     @WebMethod
     void deleteFilm(int id_film);
 
     @WebMethod
-    void insertFilm(int id_film, String title, List<String> director, String filmDuration, String description, String genre, String language);
+    void insertFilm(int id_film, String title, List<String> director, String filmDuration, String description, Genre genre, String language);
 
     @WebMethod
     List<Film> getAllFilms();
