@@ -24,13 +24,25 @@ public class Session {
 
     protected int idSession;
 
-    protected Date  sessionDate;
+    protected String  sessionDate;
 
     protected String sessionTime;
 
     private Hall hall;
 
     private Film film;
+
+    public Session() {
+
+    }
+
+    public Session(int idSession, String sessionDate, String sessionTime, Hall hall, Film film) {
+        this.idSession = idSession;
+        this.film = film;
+        this.sessionDate = sessionDate;
+        this.sessionTime = sessionTime;
+        this.hall = hall;
+    }
 
     @Override
     public String toString() {
@@ -43,11 +55,18 @@ public class Session {
                 '}';
     }
 
-    public Date getSessionDate() {
+    public int getIdSession() {
+        return idSession;
+    }
+
+    public void setIdSession(int idSession) {
+        this.idSession = idSession;
+    }
+    public String getSessionDate() {
         return sessionDate;
     }
 
-    public void setSessionDate(Date value) {
+    public void setSessionDate(String value) {
         this.sessionDate = value;
     }
 
