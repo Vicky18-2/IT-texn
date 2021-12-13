@@ -7,6 +7,8 @@ import com.ITtexn.pz3.client.hall_cl.HallService;
 import com.ITtexn.pz3.client.hall_cl.HallServiceImplementService;
 import com.ITtexn.pz3.client.sessions_cl.SessionService;
 import com.ITtexn.pz3.client.sessions_cl.SessionServiceImplementService;
+import com.ITtexn.pz3.client.ticket_cl.TicketService;
+import com.ITtexn.pz3.client.ticket_cl.TicketServiceImplementService;
 
 
 import java.net.URL;
@@ -56,6 +58,22 @@ public class Connection {
         System.out.println(sessionService.getAllSessions());
         sessionService.deleteSession(2);
         System.out.println(sessionService.countSession());
+
+
+        URL urlTicket = new URL("http://localhost:7777/ticket?wsdl");
+        TicketServiceImplementService ticketServiceImplementService = new TicketServiceImplementService(urlTicket);
+        TicketService ticketService= ticketServiceImplementService.getTicketServiceImplementPort();
+
+        com.ITtexn.pz3.client.ticket_cl.Hall hall1= new com.ITtexn.pz3.client.ticket_cl.Hall(2,"3D",8,4);
+        com.ITtexn.pz3.client.ticket_cl.Film film1 = new com.ITtexn.pz3.client.ticket_cl.Film("description412", dir, "filmDuration", com.ITtexn.pz3.client.ticket_cl.Genre.fromValue("COMEDY"),7, "ru", "tit");
+        com.ITtexn.pz3.client.ticket_cl.Session session = new com.ITtexn.pz3.client.ticket_cl.Session(film1,hall1,7,"20-10-2000","02:02:02");
+        ticketService.insertTicket(500,session,film1,hall1,2);
+        System.out.println(ticketService.getAllTickets());
+        ticketService.updateTicket(100,session,film1,hall1,2);
+        System.out.println(ticketService.getAllTickets());
+        ticketService.deleteTicket(2);
+        System.out.println(ticketService.countTicket());
+
 
     }
 

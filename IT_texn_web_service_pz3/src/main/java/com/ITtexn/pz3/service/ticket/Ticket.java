@@ -5,37 +5,28 @@ import com.ITtexn.pz3.service.film.Film;
 import com.ITtexn.pz3.service.hall.Hall;
 import com.ITtexn.pz3.service.session.Session;
 
-import java.math.BigDecimal;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ticket", namespace = "http://nure/it-texn/pz", propOrder = {
 
-})
 public class Ticket {
 
-//    @XmlElement(name = "ticket_price", namespace = "http://nure/it-texn/pz", required = true)
-    protected BigDecimal ticketPrice;
-//    @XmlElement(namespace = "http://nure/it-texn/pz", required = true)
+
+    protected int ticketPrice;
+
     protected Session session;
-//    @XmlElement(namespace = "http://nure/it-texn/pz", required = true)
+
     protected Film film;
-//    @XmlElement(namespace = "http://nure/it-texn/pz", required = true)
+
     protected Hall hall;
-//    @XmlAttribute(name = "id", required = true)
-    protected int id;
+
+    protected int idTicket;
 
 
-    public BigDecimal getTicketPrice() {
+    public int getTicketPrice() {
         return ticketPrice;
     }
 
-    public void setTicketPrice(BigDecimal value) {
+    public void setTicketPrice(int value) {
         this.ticketPrice = value;
     }
 
@@ -64,11 +55,11 @@ public class Ticket {
     }
 
     public int getId() {
-        return id;
+        return idTicket;
     }
 
     public void setId(int value) {
-        this.id = value;
+        this.idTicket = value;
     }
 
     @Override
@@ -78,7 +69,19 @@ public class Ticket {
                 ", session=" + session +
                 ", film=" + film +
                 ", hall=" + hall +
-                ", id=" + id +
+                ", id=" + idTicket +
                 '}';
+    }
+
+    public Ticket(int ticketPrice, Session session, Film film, Hall hall, int idTicket) {
+        this.ticketPrice = ticketPrice;
+        this.session = session;
+        this.film = film;
+        this.hall = hall;
+        this.idTicket = idTicket;
+    }
+
+    public Ticket(){
+
     }
 }

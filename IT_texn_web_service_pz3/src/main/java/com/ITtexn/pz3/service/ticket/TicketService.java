@@ -6,25 +6,26 @@ import com.ITtexn.pz3.service.session.Session;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
+import java.math.BigDecimal;
 import java.util.List;
 
 @WebService
 public interface TicketService {
 
     @WebMethod
-    List<Session> getAllTickets();
+    List<Ticket> getAllTickets();
 
     @WebMethod
-    Session getTicket(int idSession);
+    Ticket getTicket(int idTicket);
 
     @WebMethod
-    void insertTicket(int idSession, String sessionDate, String sessionTime, Hall hall, Film film);
+    void insertTicket(int ticketPrice, Session session, Film film, Hall hall, int idTicket );
 
     @WebMethod
-    void updateTicket(int idSession, String sessionDate,String sessionTime, Hall hall, Film film);
+    void updateTicket(int ticketPrice, Session session, Film film, Hall hall, int idTicket );
 
     @WebMethod
-    void deleteTicket(int idSession);
+    void deleteTicket(int idTicket);
 
     @WebMethod
     int countTicket();

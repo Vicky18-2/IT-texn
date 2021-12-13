@@ -4,7 +4,6 @@ import com.ITtexn.pz3.service.film.Film;
 import com.ITtexn.pz3.service.hall.Hall;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class SessionCreation {

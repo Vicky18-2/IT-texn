@@ -5,6 +5,7 @@ import com.ITtexn.pz3.service.film.FilmService;
 import com.ITtexn.pz3.service.film.FilmServiceImplement;
 import com.ITtexn.pz3.service.hall.HallServiceImplement;
 import com.ITtexn.pz3.service.session.SessionServiceImplement;
+import com.ITtexn.pz3.service.ticket.TicketServiceImplement;
 
 import javax.xml.ws.Endpoint;
 
@@ -17,6 +18,7 @@ public class EndpointComp {
         Endpoint EndpointFilm = Endpoint.publish("http://localhost:7777/film", new FilmServiceImplement());
         Endpoint EndpointHall = Endpoint.publish("http://localhost:7777/hall", new HallServiceImplement());
         Endpoint endpointSession = Endpoint.publish("http://localhost:7777/session", new SessionServiceImplement());
+        Endpoint endpointTicket = Endpoint.publish("http://localhost:7777/ticket", new TicketServiceImplement());
 
 //        FilmServiceImplement film = new FilmServiceImplement();
 //        FilmCreation createFilm = new FilmCreation();
