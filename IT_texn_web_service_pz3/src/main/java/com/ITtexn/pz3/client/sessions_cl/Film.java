@@ -1,5 +1,5 @@
 
-package com.ITtexn.pz3.client.film_cl;
+package com.ITtexn.pz3.client.sessions_cl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +23,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="description12" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="director" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
  *         &lt;element name="filmDuration" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="genre" type="{http://film.service.pz3.ITtexn.com/}genre" minOccurs="0"/>
+ *         &lt;element name="genre" type="{http://session.service.pz3.ITtexn.com/}genre" minOccurs="0"/>
  *         &lt;element name="id_film" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="language" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="title" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -58,6 +58,20 @@ public class Film {
     protected String language;
     protected String title;
 
+
+    @Override
+    public String toString() {
+        return "Film{" +
+                "description12='" + description12 + '\'' +
+                ", director=" + director +
+                ", filmDuration='" + filmDuration + '\'' +
+                ", genre=" + genre +
+                ", idFilm=" + idFilm +
+                ", language='" + language + '\'' +
+                ", title='" + title + '\'' +
+                '}';
+    }
+
     /**
      * Gets the value of the description12 property.
      * 
@@ -82,32 +96,6 @@ public class Film {
         this.description12 = value;
     }
 
-    @Override
-    public String toString() {
-        return "Film{" +
-                "description12='" + description12 + '\'' +
-                ", director=" + director +
-                ", filmDuration='" + filmDuration + '\'' +
-                ", genre=" + genre +
-                ", idFilm=" + idFilm +
-                ", language='" + language + '\'' +
-                ", title='" + title + '\'' +
-                '}';
-    }
-
-    public Film(String description12, List<String> director, String filmDuration, Genre genre, int idFilm, String language, String title) {
-        this.description12 = description12;
-        this.director = director;
-        this.filmDuration = filmDuration;
-        this.genre = genre;
-        this.idFilm = idFilm;
-        this.language = language;
-        this.title = title;
-    }
-
-    public Film(){
-
-    }
     /**
      * Gets the value of the director property.
      * 
@@ -130,8 +118,6 @@ public class Film {
      * 
      * 
      */
-
-
     public List<String> getDirector() {
         if (director == null) {
             director = new ArrayList<String>();
@@ -251,4 +237,17 @@ public class Film {
         this.title = value;
     }
 
+    public Film(String description12, List<String> director, String filmDuration, Genre genre, int idFilm, String language, String title) {
+        this.description12 = description12;
+        this.director = director;
+        this.filmDuration = filmDuration;
+        this.genre = genre;
+        this.idFilm = idFilm;
+        this.language = language;
+        this.title = title;
+    }
+
+    public Film(){
+
+    }
 }

@@ -19,15 +19,15 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class Ticket {
 
-    @XmlElement(name = "ticket_price", namespace = "http://nure/it-texn/pz", required = true)
+//    @XmlElement(name = "ticket_price", namespace = "http://nure/it-texn/pz", required = true)
     protected BigDecimal ticketPrice;
-    @XmlElement(namespace = "http://nure/it-texn/pz", required = true)
+//    @XmlElement(namespace = "http://nure/it-texn/pz", required = true)
     protected Session session;
-    @XmlElement(namespace = "http://nure/it-texn/pz", required = true)
+//    @XmlElement(namespace = "http://nure/it-texn/pz", required = true)
     protected Film film;
-    @XmlElement(namespace = "http://nure/it-texn/pz", required = true)
+//    @XmlElement(namespace = "http://nure/it-texn/pz", required = true)
     protected Hall hall;
-    @XmlAttribute(name = "id", required = true)
+//    @XmlAttribute(name = "id", required = true)
     protected int id;
 
 

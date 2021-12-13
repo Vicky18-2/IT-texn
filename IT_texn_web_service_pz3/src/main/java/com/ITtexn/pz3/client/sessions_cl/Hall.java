@@ -1,5 +1,5 @@
 
-package com.ITtexn.pz3.client.hall_cl;
+package com.ITtexn.pz3.client.sessions_cl;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -41,7 +41,6 @@ public class Hall {
     protected String hallType;
     protected int idHall;
     protected int seatQuantity;
-
 
     @Override
     public String toString() {

@@ -1,11 +1,12 @@
 package com.ITtexn.pz3.client;
 
 
-import com.ITtexn.pz3.client.film_cl.FilmService;
-import com.ITtexn.pz3.client.film_cl.FilmServiceImplementService;
-import com.ITtexn.pz3.client.film_cl.Genre;
+import com.ITtexn.pz3.client.film_cl.*;
+import com.ITtexn.pz3.client.hall_cl.Hall;
 import com.ITtexn.pz3.client.hall_cl.HallService;
 import com.ITtexn.pz3.client.hall_cl.HallServiceImplementService;
+import com.ITtexn.pz3.client.sessions_cl.SessionService;
+import com.ITtexn.pz3.client.sessions_cl.SessionServiceImplementService;
 
 
 import java.net.URL;
@@ -42,7 +43,19 @@ public class Connection {
         hallService.deleteHall(2);
         System.out.println(hallService.countHall());
 
+        URL urlSession = new URL("http://localhost:7777/session?wsdl");
+        SessionServiceImplementService sessionServiceImplementService = new SessionServiceImplementService(urlSession);
+        SessionService sessionService= sessionServiceImplementService.getSessionServiceImplementPort();
 
+
+        com.ITtexn.pz3.client.sessions_cl.Hall hall= new com.ITtexn.pz3.client.sessions_cl.Hall(2,"3D",3,4);
+        com.ITtexn.pz3.client.sessions_cl.Film film = new com.ITtexn.pz3.client.sessions_cl.Film("description12", dir, "filmDuration", com.ITtexn.pz3.client.sessions_cl.Genre.fromValue("COMEDY"),9, "ru", "tit");
+        sessionService.insertSession(2,"20-10-2000","02:02:02",hall,film);
+        System.out.println(sessionService.getAllSessions());
+        sessionService.updateSession(2,"20-10-3030","02:02:02",hall,film);
+        System.out.println(sessionService.getAllSessions());
+        sessionService.deleteSession(2);
+        System.out.println(sessionService.countSession());
 
     }
 
