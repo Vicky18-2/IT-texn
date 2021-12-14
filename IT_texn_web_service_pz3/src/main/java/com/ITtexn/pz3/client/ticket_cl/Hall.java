@@ -42,6 +42,26 @@ public class Hall {
     protected int idHall;
     protected int seatQuantity;
 
+    public Hall(int columnQuantity, String hallType, int idHall, int seatQuantity) {
+        this.columnQuantity = columnQuantity;
+        this.hallType = hallType;
+        this.idHall = idHall;
+        this.seatQuantity = seatQuantity;
+    }
+
+    public Hall(){
+
+    }
+    @Override
+    public String toString() {
+        return "Hall{" +
+                "columnQuantity=" + columnQuantity +
+                ", hallType='" + hallType + '\'' +
+                ", idHall=" + idHall +
+                ", seatQuantity=" + seatQuantity +
+                '}';
+    }
+
     /**
      * Gets the value of the columnQuantity property.
      * 
@@ -114,24 +134,4 @@ public class Hall {
         this.seatQuantity = value;
     }
 
-    public Hall(int columnQuantity, String hallType, int idHall, int seatQuantity) {
-        this.columnQuantity = columnQuantity;
-        this.hallType = hallType;
-        this.idHall = idHall;
-        this.seatQuantity = seatQuantity;
-    }
-
-    public Hall(){
-
-    }
-
-    @Override
-    public String toString() {
-        return "Hall{" +
-                "columnQuantity=" + columnQuantity +
-                ", hallType='" + hallType + '\'' +
-                ", idHall=" + idHall +
-                ", seatQuantity=" + seatQuantity +
-                '}';
-    }
 }

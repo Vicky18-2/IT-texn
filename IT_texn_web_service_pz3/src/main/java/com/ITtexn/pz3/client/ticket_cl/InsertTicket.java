@@ -21,6 +21,9 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="arg2" type="{http://ticket.service.pz3.ITtexn.com/}film" minOccurs="0"/>
  *         &lt;element name="arg3" type="{http://ticket.service.pz3.ITtexn.com/}hall" minOccurs="0"/>
  *         &lt;element name="arg4" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="arg5" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="arg6" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="arg7" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -35,7 +38,10 @@ import javax.xml.bind.annotation.XmlType;
     "arg1",
     "arg2",
     "arg3",
-    "arg4"
+    "arg4",
+    "arg5",
+    "arg6",
+    "arg7"
 })
 public class InsertTicket {
 
@@ -44,6 +50,9 @@ public class InsertTicket {
     protected Film arg2;
     protected Hall arg3;
     protected int arg4;
+    protected int arg5;
+    protected int arg6;
+    protected boolean arg7;
 
     /**
      * Gets the value of the arg0 property.
@@ -147,6 +156,54 @@ public class InsertTicket {
      */
     public void setArg4(int value) {
         this.arg4 = value;
+    }
+
+    /**
+     * Gets the value of the arg5 property.
+     * 
+     */
+    public int getArg5() {
+        return arg5;
+    }
+
+    /**
+     * Sets the value of the arg5 property.
+     * 
+     */
+    public void setArg5(int value) {
+        this.arg5 = value;
+    }
+
+    /**
+     * Gets the value of the arg6 property.
+     * 
+     */
+    public int getArg6() {
+        return arg6;
+    }
+
+    /**
+     * Sets the value of the arg6 property.
+     * 
+     */
+    public void setArg6(int value) {
+        this.arg6 = value;
+    }
+
+    /**
+     * Gets the value of the arg7 property.
+     * 
+     */
+    public boolean isArg7() {
+        return arg7;
+    }
+
+    /**
+     * Sets the value of the arg7 property.
+     * 
+     */
+    public void setArg7(boolean value) {
+        this.arg7 = value;
     }
 
 }

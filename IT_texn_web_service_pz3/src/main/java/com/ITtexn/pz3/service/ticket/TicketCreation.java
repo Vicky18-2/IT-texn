@@ -21,7 +21,7 @@ public class TicketCreation {
         dir.add("Director");
         Film film = new Film(5, "NEWFILMTICKET", dir, "01:11:11", "String", com.ITtexn.pz3.service.genre.Genre.fromValue("Mystery"), "Tyy");
         Hall hall= new Hall(1,"5D",1,1);
-        ticketList.add(new Ticket(200,session,film,hall,1));
+        ticketList.add(new Ticket(200,session,film,hall,1,4,5,false));
     }
 
     public List<Ticket> getAllTickets(){
@@ -37,19 +37,22 @@ public class TicketCreation {
         return  null;
     };
 
-    public void insertTicket(int ticketPrice, Session session, Film film, Hall hall, int idTicket ){
+    public void insertTicket(int ticketPrice, Session session, Film film, Hall hall, int idTicket, int idSeat, int idColumn, boolean ticketStatus ){
         for(Ticket ticket: ticketList){
             if(ticket.getId() == idTicket) {
                 ticket.setTicketPrice(ticketPrice);
                 ticket.setFilm(film);
                 ticket.setHall(hall);
                 ticket.setSession(session);
+                ticket.setTicketStatus(ticketStatus);
+                ticket.setIdColumn(idColumn);
+                ticket.setIdSeat(idSeat);
             }
         }
     };
 
-    public void updateTicket(int ticketPrice, Session session, Film film, Hall hall, int idTicket ){
-        Ticket ticket = new Ticket(ticketPrice,session,film,hall,idTicket);
+    public void updateTicket(int ticketPrice, Session session, Film film, Hall hall, int idTicket,int idSeat, int idColumn, boolean ticketStatus ){
+        Ticket ticket = new Ticket(ticketPrice,session,film,hall,idTicket,idSeat,idColumn,ticketStatus);
         ticketList.add(ticket);
     };
 

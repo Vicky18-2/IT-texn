@@ -19,10 +19,10 @@ public interface TicketService {
     Ticket getTicket(int idTicket);
 
     @WebMethod
-    void insertTicket(int ticketPrice, Session session, Film film, Hall hall, int idTicket );
+    void insertTicket(int ticketPrice, Session session, Film film, Hall hall, int idTicket, int idSeat, int idColumn, boolean ticketStatus );
 
     @WebMethod
-    void updateTicket(int ticketPrice, Session session, Film film, Hall hall, int idTicket );
+    void updateTicket(int ticketPrice, Session session, Film film, Hall hall, int idTicket, int idSeat, int idColumn, boolean ticketStatus  );
 
     @WebMethod
     void deleteTicket(int idTicket);

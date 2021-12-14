@@ -19,8 +19,11 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="film" type="{http://ticket.service.pz3.ITtexn.com/}film" minOccurs="0"/>
  *         &lt;element name="hall" type="{http://ticket.service.pz3.ITtexn.com/}hall" minOccurs="0"/>
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="idColumn" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="idSeat" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="session" type="{http://ticket.service.pz3.ITtexn.com/}session" minOccurs="0"/>
  *         &lt;element name="ticketPrice" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="ticketStatus" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -34,16 +37,51 @@ import javax.xml.bind.annotation.XmlType;
     "film",
     "hall",
     "id",
+    "idColumn",
+    "idSeat",
     "session",
-    "ticketPrice"
+    "ticketPrice",
+    "ticketStatus"
 })
 public class Ticket {
 
     protected Film film;
     protected Hall hall;
     protected int id;
+    protected int idColumn;
+    protected int idSeat;
     protected Session session;
     protected int ticketPrice;
+    protected boolean ticketStatus;
+
+    public Ticket(Film film, Hall hall, int id, int idColumn, int idSeat, Session session, int ticketPrice, boolean ticketStatus) {
+        this.film = film;
+        this.hall = hall;
+        this.id = id;
+        this.idColumn = idColumn;
+        this.idSeat = idSeat;
+        this.session = session;
+        this.ticketPrice = ticketPrice;
+        this.ticketStatus = ticketStatus;
+    }
+
+    public Ticket(){
+
+    }
+
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "film=" + film +
+                ", hall=" + hall +
+                ", id=" + id +
+                ", idColumn=" + idColumn +
+                ", idSeat=" + idSeat +
+                ", session=" + session +
+                ", ticketPrice=" + ticketPrice +
+                ", ticketStatus=" + ticketStatus +
+                '}';
+    }
 
     /**
      * Gets the value of the film property.
@@ -110,6 +148,38 @@ public class Ticket {
     }
 
     /**
+     * Gets the value of the idColumn property.
+     * 
+     */
+    public int getIdColumn() {
+        return idColumn;
+    }
+
+    /**
+     * Sets the value of the idColumn property.
+     * 
+     */
+    public void setIdColumn(int value) {
+        this.idColumn = value;
+    }
+
+    /**
+     * Gets the value of the idSeat property.
+     * 
+     */
+    public int getIdSeat() {
+        return idSeat;
+    }
+
+    /**
+     * Sets the value of the idSeat property.
+     * 
+     */
+    public void setIdSeat(int value) {
+        this.idSeat = value;
+    }
+
+    /**
      * Gets the value of the session property.
      * 
      * @return
@@ -149,14 +219,20 @@ public class Ticket {
         this.ticketPrice = value;
     }
 
-    @Override
-    public String toString() {
-        return "Ticket{" +
-                "film=" + film +
-                ", hall=" + hall +
-                ", id=" + id +
-                ", session=" + session +
-                ", ticketPrice=" + ticketPrice +
-                '}';
+    /**
+     * Gets the value of the ticketStatus property.
+     * 
+     */
+    public boolean isTicketStatus() {
+        return ticketStatus;
     }
+
+    /**
+     * Sets the value of the ticketStatus property.
+     * 
+     */
+    public void setTicketStatus(boolean value) {
+        this.ticketStatus = value;
+    }
+
 }

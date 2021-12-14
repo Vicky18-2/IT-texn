@@ -2,7 +2,6 @@ package com.ITtexn.pz3.client;
 
 
 import com.ITtexn.pz3.client.film_cl.*;
-import com.ITtexn.pz3.client.hall_cl.Hall;
 import com.ITtexn.pz3.client.hall_cl.HallService;
 import com.ITtexn.pz3.client.hall_cl.HallServiceImplementService;
 import com.ITtexn.pz3.client.sessions_cl.SessionService;
@@ -67,9 +66,9 @@ public class Connection {
         com.ITtexn.pz3.client.ticket_cl.Hall hall1= new com.ITtexn.pz3.client.ticket_cl.Hall(2,"3D",8,4);
         com.ITtexn.pz3.client.ticket_cl.Film film1 = new com.ITtexn.pz3.client.ticket_cl.Film("description412", dir, "filmDuration", com.ITtexn.pz3.client.ticket_cl.Genre.fromValue("COMEDY"),7, "ru", "tit");
         com.ITtexn.pz3.client.ticket_cl.Session session = new com.ITtexn.pz3.client.ticket_cl.Session(film1,hall1,7,"20-10-2000","02:02:02");
-        ticketService.insertTicket(500,session,film1,hall1,2);
+        ticketService.insertTicket(500,session,film1,hall1,2,5,5,false);
         System.out.println(ticketService.getAllTickets());
-        ticketService.updateTicket(100,session,film1,hall1,2);
+        ticketService.updateTicket(100,session,film1,hall1,2,7,7,true);
         System.out.println(ticketService.getAllTickets());
         ticketService.deleteTicket(2);
         System.out.println(ticketService.countTicket());

@@ -21,6 +21,13 @@ public class Ticket {
 
     protected int idTicket;
 
+    protected int idSeat;
+
+    protected int idColumn;
+
+
+    protected boolean ticketStatus;
+
 
     public int getTicketPrice() {
         return ticketPrice;
@@ -62,6 +69,28 @@ public class Ticket {
         this.idTicket = value;
     }
 
+    public int getIdSeat() {
+        return idSeat;
+    }
+
+    public void setIdSeat(int idSeat) {
+        this.idSeat = idSeat;
+    }
+
+    public int getIdColumn() {
+        return idColumn;
+    }
+
+    public void setIdColumn(int idColumn) {
+        this.idColumn = idColumn;
+    }
+    public boolean isTicketStatus() {
+        return ticketStatus;
+    }
+
+    public void setTicketStatus(boolean ticketStatus) {
+        this.ticketStatus = ticketStatus;
+    }
     @Override
     public String toString() {
         return "Ticket{" +
@@ -69,16 +98,22 @@ public class Ticket {
                 ", session=" + session +
                 ", film=" + film +
                 ", hall=" + hall +
-                ", id=" + idTicket +
+                ", idTicket=" + idTicket +
+                ", idSeat=" + idSeat +
+                ", idColumn=" + idColumn +
+                ", ticketStatus" + ticketStatus +
                 '}';
     }
 
-    public Ticket(int ticketPrice, Session session, Film film, Hall hall, int idTicket) {
+    public Ticket(int ticketPrice, Session session, Film film, Hall hall, int idTicket, int idSeat, int idColumn, boolean ticketStatus) {
         this.ticketPrice = ticketPrice;
         this.session = session;
         this.film = film;
         this.hall = hall;
         this.idTicket = idTicket;
+        this.idSeat = idSeat;
+        this.idColumn = idColumn;
+        this.ticketStatus = ticketStatus;
     }
 
     public Ticket(){

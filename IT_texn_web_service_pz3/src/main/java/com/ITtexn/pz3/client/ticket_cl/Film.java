@@ -58,6 +58,33 @@ public class Film {
     protected String language;
     protected String title;
 
+
+    @Override
+    public String toString() {
+        return "Film{" +
+                "description12='" + description12 + '\'' +
+                ", director=" + director +
+                ", filmDuration='" + filmDuration + '\'' +
+                ", genre=" + genre +
+                ", idFilm=" + idFilm +
+                ", language='" + language + '\'' +
+                ", title='" + title + '\'' +
+                '}';
+    }
+
+    public Film(String description12, List<String> director, String filmDuration, Genre genre, int idFilm, String language, String title) {
+        this.description12 = description12;
+        this.director = director;
+        this.filmDuration = filmDuration;
+        this.genre = genre;
+        this.idFilm = idFilm;
+        this.language = language;
+        this.title = title;
+    }
+
+    public Film(){
+
+    }
     /**
      * Gets the value of the description12 property.
      * 
@@ -223,30 +250,4 @@ public class Film {
         this.title = value;
     }
 
-    public Film(String description12, List<String> director, String filmDuration, Genre genre, int idFilm, String language, String title) {
-        this.description12 = description12;
-        this.director = director;
-        this.filmDuration = filmDuration;
-        this.genre = genre;
-        this.idFilm = idFilm;
-        this.language = language;
-        this.title = title;
-    }
-
-    public Film(){
-
-    }
-
-    @Override
-    public String toString() {
-        return "Film{" +
-                "description12='" + description12 + '\'' +
-                ", director=" + director +
-                ", filmDuration='" + filmDuration + '\'' +
-                ", genre=" + genre +
-                ", idFilm=" + idFilm +
-                ", language='" + language + '\'' +
-                ", title='" + title + '\'' +
-                '}';
-    }
 }

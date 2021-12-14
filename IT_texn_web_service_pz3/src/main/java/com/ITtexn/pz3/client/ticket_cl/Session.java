@@ -45,6 +45,29 @@ public class Session {
     protected String sessionDate;
     protected String sessionTime;
 
+    public Session(Film film, Hall hall, int idSession, String sessionDate, String sessionTime) {
+        this.film = film;
+        this.hall = hall;
+        this.idSession = idSession;
+        this.sessionDate = sessionDate;
+        this.sessionTime = sessionTime;
+    }
+
+    public Session(){
+
+    }
+
+    @Override
+    public String toString() {
+        return "Session{" +
+                "film=" + film +
+                ", hall=" + hall +
+                ", idSession=" + idSession +
+                ", sessionDate='" + sessionDate + '\'' +
+                ", sessionTime='" + sessionTime + '\'' +
+                '}';
+    }
+
     /**
      * Gets the value of the film property.
      * 
@@ -157,26 +180,4 @@ public class Session {
         this.sessionTime = value;
     }
 
-    public Session(Film film, Hall hall, int idSession, String sessionDate, String sessionTime) {
-        this.film = film;
-        this.hall = hall;
-        this.idSession = idSession;
-        this.sessionDate = sessionDate;
-        this.sessionTime = sessionTime;
-    }
-
-    public Session(){
-
-    }
-
-    @Override
-    public String toString() {
-        return "Session{" +
-                "film=" + film +
-                ", hall=" + hall +
-                ", idSession=" + idSession +
-                ", sessionDate='" + sessionDate + '\'' +
-                ", sessionTime='" + sessionTime + '\'' +
-                '}';
-    }
 }
