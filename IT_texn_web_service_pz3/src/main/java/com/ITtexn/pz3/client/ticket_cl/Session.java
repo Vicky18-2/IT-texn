@@ -76,6 +76,8 @@ public class Session {
      *     {@link Film }
      *     
      */
+
+
     public Film getFilm() {
         return film;
     }

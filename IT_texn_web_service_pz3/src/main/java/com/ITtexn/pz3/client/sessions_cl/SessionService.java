@@ -27,45 +27,6 @@ public interface SessionService {
 
     /**
      * 
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "deleteSession", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.session_cl.DeleteSession")
-    @ResponseWrapper(localName = "deleteSessionResponse", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.session_cl.DeleteSessionResponse")
-    @Action(input = "http://session.service.pz3.ITtexn.com/SessionService/deleteSessionRequest", output = "http://session.service.pz3.ITtexn.com/SessionService/deleteSessionResponse")
-    public void deleteSession(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns com.ITtexn.pz3.client.session_cl.Session
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getSession", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.session_cl.GetSession")
-    @ResponseWrapper(localName = "getSessionResponse", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.session_cl.GetSessionResponse")
-    @Action(input = "http://session.service.pz3.ITtexn.com/SessionService/getSessionRequest", output = "http://session.service.pz3.ITtexn.com/SessionService/getSessionResponse")
-    public Session getSession(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<com.ITtexn.pz3.client.session_cl.Session>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getAllSessions", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.session_cl.GetAllSessions")
-    @ResponseWrapper(localName = "getAllSessionsResponse", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.session_cl.GetAllSessionsResponse")
-    @Action(input = "http://session.service.pz3.ITtexn.com/SessionService/getAllSessionsRequest", output = "http://session.service.pz3.ITtexn.com/SessionService/getAllSessionsResponse")
-    public List<Session> getAllSessions();
-
-    /**
-     * 
      * @param arg3
      * @param arg2
      * @param arg4
@@ -73,10 +34,10 @@ public interface SessionService {
      * @param arg0
      */
     @WebMethod
-    @RequestWrapper(localName = "insertSession", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.session_cl.InsertSession")
-    @ResponseWrapper(localName = "insertSessionResponse", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.session_cl.InsertSessionResponse")
-    @Action(input = "http://session.service.pz3.ITtexn.com/SessionService/insertSessionRequest", output = "http://session.service.pz3.ITtexn.com/SessionService/insertSessionResponse")
-    public void insertSession(
+    @RequestWrapper(localName = "updateSession", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.sessions_cl.UpdateSession")
+    @ResponseWrapper(localName = "updateSessionResponse", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.sessions_cl.UpdateSessionResponse")
+    @Action(input = "http://session.service.pz3.ITtexn.com/SessionService/updateSessionRequest", output = "http://session.service.pz3.ITtexn.com/SessionService/updateSessionResponse")
+    public void updateSession(
         @WebParam(name = "arg0", targetNamespace = "")
         int arg0,
         @WebParam(name = "arg1", targetNamespace = "")
@@ -90,15 +51,54 @@ public interface SessionService {
 
     /**
      * 
+     * @param arg0
+     * @return
+     *     returns com.ITtexn.pz3.client.sessions_cl.Session
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getSession", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.sessions_cl.GetSession")
+    @ResponseWrapper(localName = "getSessionResponse", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.sessions_cl.GetSessionResponse")
+    @Action(input = "http://session.service.pz3.ITtexn.com/SessionService/getSessionRequest", output = "http://session.service.pz3.ITtexn.com/SessionService/getSessionResponse")
+    public Session getSession(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
      * @return
      *     returns int
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "countSession", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.session_cl.CountSession")
-    @ResponseWrapper(localName = "countSessionResponse", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.session_cl.CountSessionResponse")
+    @RequestWrapper(localName = "countSession", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.sessions_cl.CountSession")
+    @ResponseWrapper(localName = "countSessionResponse", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.sessions_cl.CountSessionResponse")
     @Action(input = "http://session.service.pz3.ITtexn.com/SessionService/countSessionRequest", output = "http://session.service.pz3.ITtexn.com/SessionService/countSessionResponse")
     public int countSession();
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<com.ITtexn.pz3.client.sessions_cl.Session>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getAllSessions", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.sessions_cl.GetAllSessions")
+    @ResponseWrapper(localName = "getAllSessionsResponse", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.sessions_cl.GetAllSessionsResponse")
+    @Action(input = "http://session.service.pz3.ITtexn.com/SessionService/getAllSessionsRequest", output = "http://session.service.pz3.ITtexn.com/SessionService/getAllSessionsResponse")
+    public List<Session> getAllSessions();
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "deleteSession", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.sessions_cl.DeleteSession")
+    @ResponseWrapper(localName = "deleteSessionResponse", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.sessions_cl.DeleteSessionResponse")
+    @Action(input = "http://session.service.pz3.ITtexn.com/SessionService/deleteSessionRequest", output = "http://session.service.pz3.ITtexn.com/SessionService/deleteSessionResponse")
+    public void deleteSession(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
 
     /**
      * 
@@ -109,10 +109,10 @@ public interface SessionService {
      * @param arg0
      */
     @WebMethod
-    @RequestWrapper(localName = "updateSession", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.session_cl.UpdateSession")
-    @ResponseWrapper(localName = "updateSessionResponse", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.session_cl.UpdateSessionResponse")
-    @Action(input = "http://session.service.pz3.ITtexn.com/SessionService/updateSessionRequest", output = "http://session.service.pz3.ITtexn.com/SessionService/updateSessionResponse")
-    public void updateSession(
+    @RequestWrapper(localName = "insertSession", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.sessions_cl.InsertSession")
+    @ResponseWrapper(localName = "insertSessionResponse", targetNamespace = "http://session.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.sessions_cl.InsertSessionResponse")
+    @Action(input = "http://session.service.pz3.ITtexn.com/SessionService/insertSessionRequest", output = "http://session.service.pz3.ITtexn.com/SessionService/insertSessionResponse")
+    public void insertSession(
         @WebParam(name = "arg0", targetNamespace = "")
         int arg0,
         @WebParam(name = "arg1", targetNamespace = "")

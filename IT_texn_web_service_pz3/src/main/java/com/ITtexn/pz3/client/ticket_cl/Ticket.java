@@ -54,21 +54,6 @@ public class Ticket {
     protected int ticketPrice;
     protected boolean ticketStatus;
 
-    public Ticket(Film film, Hall hall, int id, int idColumn, int idSeat, Session session, int ticketPrice, boolean ticketStatus) {
-        this.film = film;
-        this.hall = hall;
-        this.id = id;
-        this.idColumn = idColumn;
-        this.idSeat = idSeat;
-        this.session = session;
-        this.ticketPrice = ticketPrice;
-        this.ticketStatus = ticketStatus;
-    }
-
-    public Ticket(){
-
-    }
-
     @Override
     public String toString() {
         return "Ticket{" +

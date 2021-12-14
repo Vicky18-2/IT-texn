@@ -52,6 +52,7 @@ public class Hall {
     public Hall(){
 
     }
+
     @Override
     public String toString() {
         return "Hall{" +
@@ -61,7 +62,6 @@ public class Hall {
                 ", seatQuantity=" + seatQuantity +
                 '}';
     }
-
     /**
      * Gets the value of the columnQuantity property.
      * 

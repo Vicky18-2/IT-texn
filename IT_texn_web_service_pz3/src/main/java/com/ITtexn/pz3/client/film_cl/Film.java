@@ -1,8 +1,6 @@
 
 package com.ITtexn.pz3.client.film_cl;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -21,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="description12" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="director" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="director" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="filmDuration" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="genre" type="{http://film.service.pz3.ITtexn.com/}genre" minOccurs="0"/>
  *         &lt;element name="id_film" type="{http://www.w3.org/2001/XMLSchema}int"/>
@@ -48,8 +46,7 @@ import javax.xml.bind.annotation.XmlType;
 public class Film {
 
     protected String description12;
-    @XmlElement(nillable = true)
-    protected List<String> director;
+    protected String director;
     protected String filmDuration;
     @XmlSchemaType(name = "string")
     protected Genre genre;
@@ -57,6 +54,19 @@ public class Film {
     protected int idFilm;
     protected String language;
     protected String title;
+
+    @Override
+    public String toString() {
+        return "Film{" +
+                "description12='" + description12 + '\'' +
+                ", director='" + director + '\'' +
+                ", filmDuration='" + filmDuration + '\'' +
+                ", genre=" + genre +
+                ", idFilm=" + idFilm +
+                ", language='" + language + '\'' +
+                ", title='" + title + '\'' +
+                '}';
+    }
 
     /**
      * Gets the value of the description12 property.
@@ -82,61 +92,28 @@ public class Film {
         this.description12 = value;
     }
 
-    @Override
-    public String toString() {
-        return "Film{" +
-                "description12='" + description12 + '\'' +
-                ", director=" + director +
-                ", filmDuration='" + filmDuration + '\'' +
-                ", genre=" + genre +
-                ", idFilm=" + idFilm +
-                ", language='" + language + '\'' +
-                ", title='" + title + '\'' +
-                '}';
-    }
-
-    public Film(String description12, List<String> director, String filmDuration, Genre genre, int idFilm, String language, String title) {
-        this.description12 = description12;
-        this.director = director;
-        this.filmDuration = filmDuration;
-        this.genre = genre;
-        this.idFilm = idFilm;
-        this.language = language;
-        this.title = title;
-    }
-
-    public Film(){
-
-    }
     /**
      * Gets the value of the director property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the director property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getDirector().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link String }
-     * 
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
+    public String getDirector() {
+        return director;
+    }
 
-
-    public List<String> getDirector() {
-        if (director == null) {
-            director = new ArrayList<String>();
-        }
-        return this.director;
+    /**
+     * Sets the value of the director property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDirector(String value) {
+        this.director = value;
     }
 
     /**

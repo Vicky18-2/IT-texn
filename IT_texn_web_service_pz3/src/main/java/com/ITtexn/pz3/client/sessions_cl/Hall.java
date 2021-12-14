@@ -42,6 +42,17 @@ public class Hall {
     protected int idHall;
     protected int seatQuantity;
 
+    public Hall(int columnQuantity, String hallType, int idHall, int seatQuantity) {
+        this.columnQuantity = columnQuantity;
+        this.hallType = hallType;
+        this.idHall = idHall;
+        this.seatQuantity = seatQuantity;
+    }
+
+    public Hall(){
+
+    }
+
     @Override
     public String toString() {
         return "Hall{" +
@@ -122,17 +133,6 @@ public class Hall {
      */
     public void setSeatQuantity(int value) {
         this.seatQuantity = value;
-    }
-
-    public Hall(int idHall, String hallType, int columnQuantity, int seatQuantity) {
-        this.hallType = hallType;
-        this.columnQuantity = columnQuantity;
-        this.seatQuantity = seatQuantity;
-        this.idHall = idHall;
-    }
-
-    public Hall(){
-
     }
 
 }

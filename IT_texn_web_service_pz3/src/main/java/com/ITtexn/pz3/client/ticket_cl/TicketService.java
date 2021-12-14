@@ -28,6 +28,33 @@ public interface TicketService {
     /**
      * 
      * @param arg0
+     * @return
+     *     returns com.ITtexn.pz3.client.ticket_cl.Ticket
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getTicket", targetNamespace = "http://ticket.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.ticket_cl.GetTicket")
+    @ResponseWrapper(localName = "getTicketResponse", targetNamespace = "http://ticket.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.ticket_cl.GetTicketResponse")
+    @Action(input = "http://ticket.service.pz3.ITtexn.com/TicketService/getTicketRequest", output = "http://ticket.service.pz3.ITtexn.com/TicketService/getTicketResponse")
+    public Ticket getTicket(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<com.ITtexn.pz3.client.ticket_cl.Ticket>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getAllTickets", targetNamespace = "http://ticket.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.ticket_cl.GetAllTickets")
+    @ResponseWrapper(localName = "getAllTicketsResponse", targetNamespace = "http://ticket.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.ticket_cl.GetAllTicketsResponse")
+    @Action(input = "http://ticket.service.pz3.ITtexn.com/TicketService/getAllTicketsRequest", output = "http://ticket.service.pz3.ITtexn.com/TicketService/getAllTicketsResponse")
+    public List<Ticket> getAllTickets();
+
+    /**
+     * 
+     * @param arg0
      */
     @WebMethod
     @RequestWrapper(localName = "deleteTicket", targetNamespace = "http://ticket.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.ticket_cl.DeleteTicket")
@@ -36,18 +63,6 @@ public interface TicketService {
     public void deleteTicket(
         @WebParam(name = "arg0", targetNamespace = "")
         int arg0);
-
-    /**
-     * 
-     * @return
-     *     returns int
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "countTicket", targetNamespace = "http://ticket.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.ticket_cl.CountTicket")
-    @ResponseWrapper(localName = "countTicketResponse", targetNamespace = "http://ticket.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.ticket_cl.CountTicketResponse")
-    @Action(input = "http://ticket.service.pz3.ITtexn.com/TicketService/countTicketRequest", output = "http://ticket.service.pz3.ITtexn.com/TicketService/countTicketResponse")
-    public int countTicket();
 
     /**
      * 
@@ -84,18 +99,15 @@ public interface TicketService {
 
     /**
      * 
-     * @param arg0
      * @return
-     *     returns com.ITtexn.pz3.client.ticket_cl.Ticket
+     *     returns int
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getTicket", targetNamespace = "http://ticket.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.ticket_cl.GetTicket")
-    @ResponseWrapper(localName = "getTicketResponse", targetNamespace = "http://ticket.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.ticket_cl.GetTicketResponse")
-    @Action(input = "http://ticket.service.pz3.ITtexn.com/TicketService/getTicketRequest", output = "http://ticket.service.pz3.ITtexn.com/TicketService/getTicketResponse")
-    public Ticket getTicket(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
+    @RequestWrapper(localName = "countTicket", targetNamespace = "http://ticket.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.ticket_cl.CountTicket")
+    @ResponseWrapper(localName = "countTicketResponse", targetNamespace = "http://ticket.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.ticket_cl.CountTicketResponse")
+    @Action(input = "http://ticket.service.pz3.ITtexn.com/TicketService/countTicketRequest", output = "http://ticket.service.pz3.ITtexn.com/TicketService/countTicketResponse")
+    public int countTicket();
 
     /**
      * 
@@ -129,17 +141,5 @@ public interface TicketService {
         int arg6,
         @WebParam(name = "arg7", targetNamespace = "")
         boolean arg7);
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<com.ITtexn.pz3.client.ticket_cl.Ticket>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getAllTickets", targetNamespace = "http://ticket.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.ticket_cl.GetAllTickets")
-    @ResponseWrapper(localName = "getAllTicketsResponse", targetNamespace = "http://ticket.service.pz3.ITtexn.com/", className = "com.ITtexn.pz3.client.ticket_cl.GetAllTicketsResponse")
-    @Action(input = "http://ticket.service.pz3.ITtexn.com/TicketService/getAllTicketsRequest", output = "http://ticket.service.pz3.ITtexn.com/TicketService/getAllTicketsResponse")
-    public List<Ticket> getAllTickets();
 
 }

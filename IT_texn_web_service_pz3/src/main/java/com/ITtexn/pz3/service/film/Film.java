@@ -12,7 +12,7 @@ public class Film  {
 
     protected String title;
 
-    protected List<String> director;
+    protected String director;
 
     protected String filmDuration;
 
@@ -42,15 +42,12 @@ public class Film  {
         this.title = value;
     }
 
-    public void setDirector(List<String> director) {
-        this.director = director;
+    public String getDirector() {
+        return director;
     }
 
-    public List<String> getDirector() {
-        if (director == null) {
-            director = new ArrayList<String>();
-        }
-        return this.director;
+    public void setDirector(String director) {
+        this.director = director;
     }
 
     @Override
@@ -102,7 +99,7 @@ public class Film  {
 
     };
 
-    public Film(int id_film, String title, List<String> director, String filmDuration, String description12, Genre genre, String language){
+    public Film(int id_film, String title, String director, String filmDuration, String description12, Genre genre, String language){
         this.id_film = id_film;
         this.title = title;
         this.director = director;

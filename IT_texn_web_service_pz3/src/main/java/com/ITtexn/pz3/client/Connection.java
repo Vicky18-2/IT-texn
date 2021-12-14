@@ -11,7 +11,6 @@ import com.ITtexn.pz3.client.ticket_cl.TicketServiceImplementService;
 
 
 import java.net.URL;
-import java.util.ArrayList;
 
 
 public class Connection {
@@ -20,11 +19,10 @@ public class Connection {
         FilmServiceImplementService filmServiceImplementService = new FilmServiceImplementService(urlFilm);
         FilmService filmServiceProxy = filmServiceImplementService.getFilmServiceImplementPort();
 
-        ArrayList<String> dir = new ArrayList<>();
-        dir.add("Director");
-        filmServiceProxy.insertFilm(5, "FFF", dir, "01:11:11", "String", Genre.fromValue("COMEDY"), "Tyy");
+
+        filmServiceProxy.insertFilm(5, "FFF", "DED", "01:11:11", "String", Genre.fromValue("COMEDY"), "Tyy");
         System.out.println(filmServiceProxy.getAllFilms());
-        filmServiceProxy.updateFilm(5, "UPDATE11", dir, "01:11:11", "String", Genre.fromValue("MYSTERY"), "Tyy");
+        filmServiceProxy.updateFilm(5, "UPDATE11", "DED", "01:11:11", "String", Genre.fromValue("MYSTERY"), "Tyy");
         System.out.println(filmServiceProxy.getAllFilms());
         filmServiceProxy.deleteFilm(5);
         System.out.println(filmServiceProxy.getAllFilms());
@@ -50,7 +48,7 @@ public class Connection {
 
 
         com.ITtexn.pz3.client.sessions_cl.Hall hall= new com.ITtexn.pz3.client.sessions_cl.Hall(2,"3D",3,4);
-        com.ITtexn.pz3.client.sessions_cl.Film film = new com.ITtexn.pz3.client.sessions_cl.Film("description12", dir, "filmDuration", com.ITtexn.pz3.client.sessions_cl.Genre.fromValue("COMEDY"),9, "ru", "tit");
+        com.ITtexn.pz3.client.sessions_cl.Film film = new com.ITtexn.pz3.client.sessions_cl.Film("description12", "TTT", "filmDuration", com.ITtexn.pz3.client.sessions_cl.Genre.fromValue("COMEDY"),9, "ru", "tit");
         sessionService.insertSession(2,"20-10-2000","02:02:02",hall,film);
         System.out.println(sessionService.getAllSessions());
         sessionService.updateSession(2,"20-10-3030","02:02:02",hall,film);
@@ -64,7 +62,7 @@ public class Connection {
         TicketService ticketService= ticketServiceImplementService.getTicketServiceImplementPort();
 
         com.ITtexn.pz3.client.ticket_cl.Hall hall1= new com.ITtexn.pz3.client.ticket_cl.Hall(2,"3D",8,4);
-        com.ITtexn.pz3.client.ticket_cl.Film film1 = new com.ITtexn.pz3.client.ticket_cl.Film("description412", dir, "filmDuration", com.ITtexn.pz3.client.ticket_cl.Genre.fromValue("COMEDY"),7, "ru", "tit");
+        com.ITtexn.pz3.client.ticket_cl.Film film1 = new com.ITtexn.pz3.client.ticket_cl.Film("description412", "HHH", "filmDuration", com.ITtexn.pz3.client.ticket_cl.Genre.fromValue("COMEDY"),7, "ru", "tit");
         com.ITtexn.pz3.client.ticket_cl.Session session = new com.ITtexn.pz3.client.ticket_cl.Session(film1,hall1,7,"20-10-2000","02:02:02");
         ticketService.insertTicket(500,session,film1,hall1,2,5,5,false);
         System.out.println(ticketService.getAllTickets());

@@ -25,7 +25,6 @@ public class Ticket {
 
     protected int idColumn;
 
-
     protected boolean ticketStatus;
 
 
