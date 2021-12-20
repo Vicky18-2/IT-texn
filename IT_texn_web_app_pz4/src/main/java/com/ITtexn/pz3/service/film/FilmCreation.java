@@ -13,9 +13,7 @@ public class FilmCreation extends Film {
 
     public FilmCreation() {
         filmList = new ArrayList<>();
-        List<String> dirList= new ArrayList<>();
-        dirList.add("dir");
-        filmList.add(new Film(1, "Title",dirList, "01:01:01", "description", Genre.fromValue("Comedy"), "RU"));
+        filmList.add(new Film(1, "Title","TOM", "01:01:01", "description", Genre.fromValue("Comedy"), "RU"));
     }
     public List<Film> getAllFilmList() {
         return filmList;
@@ -31,7 +29,7 @@ public class FilmCreation extends Film {
         return null;
     }
 
-    public void updateFilm(int id_film, String title,List<String> director, String filmDuration, String description, Genre genre, String language) {
+    public void updateFilm(int id_film, String title,String director, String filmDuration, String description, Genre genre, String language) {
         for (Film film : filmList) {
             if (film.getId_film() == id_film) {
                 film.setTitle(title);
@@ -44,7 +42,7 @@ public class FilmCreation extends Film {
         }
     }
 
-    public void insertFilm(int id_film, String title, List<String> director, String filmDuration, String description, Genre genre, String language){
+    public void insertFilm(int id_film, String title,String director, String filmDuration, String description, Genre genre, String language){
         Film film= new Film(id_film, title, director,filmDuration, description, genre, language);
         filmList.add(film);
     }

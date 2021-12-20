@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="IT_texn_web_app_pz4" />
+        <module name="IT_texn_web_service_pz3" />
       </profile>
     </annotationProcessing>
   </component>
